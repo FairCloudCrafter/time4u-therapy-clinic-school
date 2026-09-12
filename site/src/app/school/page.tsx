@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { phoneDigits } from "../lib/business";
+import { business, phoneDigits } from "../lib/business";
 
 export const metadata: Metadata = {
   title: "School of Massage Therapy",
   description:
-    "Time 4U Therapy Massage Clinic and School — massage therapy training and classes coming soon in Chickasha, Oklahoma. Join our newsletter to be first to know when enrollment opens.",
+    "Time 4U Therapy Massage Clinic and School — massage therapy training coming soon in Chickasha, Oklahoma. Student massages available now at reduced pricing.",
 };
 
 export default function SchoolPage() {
@@ -52,6 +52,32 @@ export default function SchoolPage() {
           </article>
         </div>
       </section>
+
+      {business.studentPricing.length > 0 && (
+        <section className="section-pad">
+          <div className="wrap">
+            <article className="card">
+              <h3>Student Massages</h3>
+              <p>
+                Practice massages given by our students are available now at
+                reduced pricing while our program grows.
+              </p>
+              <ul className="steps">
+                {business.studentPricing.map((item) => (
+                  <li key={item.service}>
+                    <strong>{item.price}</strong> — {item.service}
+                  </li>
+                ))}
+              </ul>
+              <p className="section-cta">
+                <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
+                  Call to book a student massage
+                </a>
+              </p>
+            </article>
+          </div>
+        </section>
+      )}
     </main>
   );
 }

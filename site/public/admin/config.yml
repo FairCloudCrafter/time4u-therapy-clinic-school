@@ -39,6 +39,15 @@ collections:
           - { name: movingNotice, label: "Notice banner", widget: string, required: false, hint: "Short announcement, e.g. a move date. Leave blank to hide." }
           - { name: licenseNumber, label: "License number", widget: string }
           - { name: reviewsRating, label: "Google rating text", widget: string, hint: "e.g. 4.8 out of 5" }
+          - name: studentPricing
+            label: "Student massage pricing"
+            label_singular: "Price"
+            widget: list
+            required: false
+            hint: "Shown on the School page. Leave empty to hide the pricing section."
+            fields:
+              - { name: service, label: "Service", widget: string, hint: "e.g. Hour massage" }
+              - { name: price, label: "Price", widget: string, hint: "e.g. $45.00" }
           - name: reviews
             label: "Reviews"
             label_singular: "Review"

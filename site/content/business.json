@@ -11,6 +11,12 @@
   "movingNotice": "Moving to our new location September 25!",
   "licenseNumber": "84488",
   "reviewsRating": "4.8 out of 5",
+  "studentPricing": [
+    { "service": "Half hour massage", "price": "$25.00" },
+    { "service": "Hour massage", "price": "$45.00" },
+    { "service": "1\u00bd hour massage", "price": "$65.00" },
+    { "service": "Sinus massage", "price": "$30.00" }
+  ],
   "reviews": [
     {
       "quote": "I was a first-time client and just happened to be close by and walked in with no appointment. They had no problem squeezing me in for a 30-minute foot massage, took their time, and really cared about my problem areas, explaining what they were doing as we went along. I left feeling like I was walking on clouds. Definitely will be back soon!",
