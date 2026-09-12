@@ -1,0 +1,30 @@
+name = "cms-access-auth"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# --- Custom domain route -------------------------------------------------------
+# Served on an Access-protected subdomain of the site's zone. Must stay above the
+# [vars] table: in TOML, top-level keys have to come before any table header.
+routes = [
+  { pattern = "cms-auth.time4utherapymassageclinicandschool.com", custom_domain = true }
+]
+
+# --- Per-project configuration -------------------------------------------------
+# These are public (safe to commit). The only secret is GITHUB_TOKEN (see below).
+[vars]
+PROVIDER = "github"
+
+# Origins where the CMS admin page (/admin) is served. The GitHub token is only
+# delivered to these origins. Include the custom domain and the *.pages.dev URL.
+SITE_ORIGINS = "https://time4utherapymassageclinicandschool.com,https://www.time4utherapymassageclinicandschool.com,https://time4u-therapy-clinic-school.pages.dev"
+
+# Cloudflare Access verification (defense in depth). Fill both in after creating
+# the Access application:
+#   CF_ACCESS_TEAM_DOMAIN = your Access team subdomain, e.g. "faircloudcrafter"
+#   CF_ACCESS_AUD         = the Access application's Audience (AUD) tag
+CF_ACCESS_TEAM_DOMAIN = ""
+CF_ACCESS_AUD = ""
+
+# --- Secret (do NOT put here) --------------------------------------------------
+# A fine-grained GitHub PAT scoped to the content repo, Contents: Read and write:
+#   npx wrangler secret put GITHUB_TOKEN
