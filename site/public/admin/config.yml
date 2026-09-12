@@ -5,8 +5,8 @@ backend:
   name: github
   repo: FairCloudCrafter/time4u-therapy-clinic-school
   branch: main
-  # OAuth login handler (Cloudflare Worker). Replace with the deployed worker URL.
-  base_url: https://REPLACE-WITH-YOUR-OAUTH-WORKER.workers.dev
+  # OAuth login handler — Cloudflare Access-gated worker (Clara logs in by email).
+  base_url: https://cms-auth.time4utherapymassageclinicandschool.com
 
 # Lets us preview/test the editor locally against real files:
 #   in site/: npx decap-server   (one terminal)
