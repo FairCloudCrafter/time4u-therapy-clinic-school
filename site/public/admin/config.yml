@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  repo: felisbinofarms/time4u-therapy-clinic-school
+  repo: FairCloudCrafter/time4u-therapy-clinic-school
   branch: main
   # OAuth login handler (Cloudflare Worker). Replace with the deployed worker URL.
   base_url: https://REPLACE-WITH-YOUR-OAUTH-WORKER.workers.dev
