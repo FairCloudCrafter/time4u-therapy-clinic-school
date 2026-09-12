@@ -28,8 +28,8 @@ export default function SchoolPage() {
             <h3>Coming Soon</h3>
             <p>
               Program details, class schedules, and enrollment information are on
-              the way. Check back soon — or sign up for our newsletter below and
-              we&apos;ll let you know the moment enrollment opens.
+              the way. Check back soon — or give us a call and we&apos;ll let you
+              know the moment enrollment opens.
             </p>
             <div className="badge-row">
               <span className="badge">Hands-on Training</span>
@@ -40,9 +40,9 @@ export default function SchoolPage() {
           <article className="card">
             <h3>Be first to know</h3>
             <p>
-              Interested in becoming a massage therapist? Add your email to our
-              newsletter using the sign-up in the footer, and you&apos;ll be
-              among the first to hear about start dates and how to apply.
+              Interested in becoming a massage therapist? Give us a call or send
+              a text, and you&apos;ll be among the first to hear about start
+              dates and how to apply.
             </p>
             <p className="section-cta">
               <a className="btn btn-primary" href={`tel:${phoneDigits}`}>

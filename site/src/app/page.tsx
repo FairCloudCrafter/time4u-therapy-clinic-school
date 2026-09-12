@@ -190,8 +190,8 @@ export default function Home() {
             <div>
               <h2>New: School of Massage Therapy</h2>
               <p>
-                Training and classes are on the way. Sign up for our newsletter
-                to be the first to know when enrollment opens.
+                Training and classes are on the way. Call or text us to be the
+                first to know when enrollment opens.
               </p>
             </div>
             <Link className="btn btn-primary" href="/school">
