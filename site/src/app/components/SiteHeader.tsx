@@ -7,6 +7,7 @@ import { business, phoneDigits } from "../lib/business";
 
 const navLinks = [
   { href: "/services", label: "Services" },
+  { href: "/benefits", label: "Benefits" },
   { href: "/about", label: "About" },
   { href: "/credentials", label: "Credentials" },
   { href: "/faq", label: "FAQ" },

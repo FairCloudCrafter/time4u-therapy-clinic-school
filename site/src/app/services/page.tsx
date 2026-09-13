@@ -56,6 +56,16 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
+                {"benefitSummary" in group && group.benefitSummary && (
+                  <div className="service-benefit-summary">
+                    {group.benefitSummary as string}
+                    {"benefitAnchor" in group && group.benefitAnchor && (
+                      <Link href={`/benefits#${group.benefitAnchor}`}>
+                        Learn about the benefits →
+                      </Link>
+                    )}
+                  </div>
+                )}
               </article>
             ))}
           </div>

@@ -16,6 +16,8 @@
   "serviceGroups": [
     {
       "title": "Massage Therapy",
+      "benefitSummary": "Reduces stress, relieves pain, improves mobility, and supports immunity. Clinically effective for low-back pain, anxiety, prenatal care, and recovery.",
+      "benefitAnchor": "massage",
       "items": [
         { "name": "Half hour massage", "price": "$45.00" },
         { "name": "Hour massage", "price": "$75.00" },
@@ -38,6 +40,8 @@
     },
     {
       "title": "Other Services",
+      "benefitSummary": "From ionic detox foot baths and ear candling to body sculpting and sugaring — each service is tailored to your wellness and body care goals.",
+      "benefitAnchor": "detox",
       "items": [
         { "name": "Body Sculpting machine", "price": "$100.00/hr" },
         { "name": "Detox", "price": "$55.00" },

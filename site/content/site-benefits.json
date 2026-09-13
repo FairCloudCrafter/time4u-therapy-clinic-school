@@ -1,0 +1,100 @@
+{
+  "eyebrow": "What to Expect",
+  "headline": "Benefits of Each Service",
+  "intro": "Not sure which service is right for you? Here's what each one does, who it helps most, and how to prepare — so you can come in confident and leave feeling the difference.",
+
+  "firstVisit": {
+    "heading": "Your first visit",
+    "body": "Clara starts every new client with a brief intake conversation — your health history, current concerns, and what you're hoping to feel when you leave. Sessions are entirely client-led. You set the pressure, focus area, and comfort level. Nothing is done without your input.",
+    "items": [
+      "Arrive 5–10 minutes early to complete your intake form",
+      "Wear or bring clothing you can easily change out of",
+      "Tell Clara what's bothering you — she adjusts every session to your feedback",
+      "Drink extra water after your session to help your body flush metabolic waste"
+    ]
+  },
+
+  "services": [
+    {
+      "id": "massage",
+      "name": "Massage Therapy",
+      "tagline": "The most effective tool for managing stress, pain, and tension.",
+      "description": "Experts estimate that upwards of ninety percent of disease is stress-related. And perhaps nothing ages us faster, internally and externally, than high stress. Therapeutic massage is one of the most clinically supported ways to address that. Regular sessions reduce anxiety, improve sleep quality, and help your body recover from the wear of daily life.",
+      "benefits": [
+        "Alleviates low-back pain and improves range of motion",
+        "Enhances immunity by stimulating lymph flow — the body's natural defense system",
+        "Reduces anxiety, depression, and chronic stress",
+        "Improves circulation and pumps oxygen into tissues and vital organs",
+        "Releases endorphins — your body's natural painkiller",
+        "Supports pregnancy comfort and postpartum recovery",
+        "Helps athletes prepare for and recover from strenuous workouts",
+        "Reduces scar tissue and promotes tissue regeneration"
+      ],
+      "disclaimer": "Massage therapy does not diagnose illness, prescribe medications, or perform spinal manipulation. Please inform Clara of all known physical or medical conditions. Massage should not replace expert care by a qualified medical practitioner."
+    },
+    {
+      "id": "reflexology",
+      "name": "Reflexology",
+      "tagline": "Ancient healing through precise pressure on the feet and hands.",
+      "description": "Reflexology maps specific zones on your feet and hands to organs and systems throughout the body. Applying targeted pressure to these points stimulates your nervous system, promotes circulation, and supports your body's natural healing response. Sessions typically last 30–60 minutes and require no undressing — making this an ideal starting point for new clients.",
+      "benefits": [
+        "Deeply relaxing — no undressing required for most sessions",
+        "Helps restore balance and energy after injury or fatigue",
+        "Boosts sluggish circulation",
+        "Useful for stress, migraines, IBS, back pain, and poor digestion",
+        "Helps relieve menopausal symptoms, PMS, and period pain",
+        "Reduces pressure on legs and feet during pregnancy",
+        "Calms the endocrine and reproductive system"
+      ],
+      "disclaimer": "Reflexology cannot promise to cure any disease or illness. It is not suitable for people with verruca, athlete's foot, osteoporosis, or recently broken bones in the ankle, foot, or hand. Reflexology should not replace expert care by a qualified medical practitioner."
+    },
+    {
+      "id": "aromatherapy",
+      "name": "Aromatherapy",
+      "tagline": "Therapeutic scent that works alongside your body's own healing.",
+      "description": "Aromatherapy uses pure essential oils derived from aromatic plants to support physical and emotional well-being. Clara selects oils based on your specific needs at each session — calming, energizing, anti-inflammatory, or mood-lifting. Aromatherapy can be added to your massage or reflexology session, or experienced on its own.",
+      "benefits": [
+        "Reduces stress and anxiety with targeted calming scents",
+        "Uplifts mood and eases mild depression",
+        "Improves sleep quality and depth",
+        "Energizes and improves mental focus",
+        "Essential oils offer healing benefits beyond their scent",
+        "Pairs beautifully with massage and reflexology sessions"
+      ],
+      "disclaimer": "Aromatherapy does not constitute the practice of medicine and does not replace the advice of your physician. Please inform Clara of any known allergies or sensitivities to plants, oils, or fragrances before your session."
+    },
+    {
+      "id": "waxing",
+      "name": "Body Waxing & Sugaring",
+      "tagline": "Longer-lasting, smoother results — especially with natural sugaring.",
+      "description": "Waxing removes hair directly from the root, producing results that last 2–3 weeks. After repeated sessions, regrowth becomes finer and sparser over time. Sugaring goes further — using a 100% natural paste of sugar, water, and lemon juice that is gentler on the skin and can even be applied over the same area multiple times without causing damage.",
+      "benefits": [
+        "Results last 2–3 weeks; hair grows back finer and softer each time",
+        "Sugaring paste is 100% natural and organic — made only from sugar, water, and lemon juice",
+        "Applied at body temperature — will never burn the skin",
+        "Suitable for sensitive skin, eczema, and psoriasis",
+        "Exfoliates dead skin cells during hair removal",
+        "Causes less discomfort than traditional waxing over time",
+        "No sticky residue — cleans up easily with water"
+      ],
+      "prepTip": "Pre-session tip: allow 2–3 weeks of growth (about ¼ inch for fine hair, ½ inch for coarse hair). Exfoliate the day before your appointment. Avoid direct sunlight for 24 hours after your service."
+    },
+    {
+      "id": "detox",
+      "name": "Ionic Detox Foot Bath",
+      "tagline": "A gentle full-body detox through the soles of your feet.",
+      "description": "The ionic foot bath uses a gentle electric current to stimulate ion exchange through the pores in your feet, encouraging the body to release toxins absorbed from food, environment, and daily exposure. It's a relaxing, non-invasive session that clients often choose as a complement to massage or on its own as a wellness reset.",
+      "benefits": [
+        "Helps neutralize toxins accumulated from food and environmental exposure",
+        "Promotes relaxation and an overall sense of well-being",
+        "Immediate visible results during the session",
+        "Gentle and non-invasive — you simply relax and soak your feet",
+        "Pairs well with massage sessions as a complete wellness experience"
+      ]
+    }
+  ],
+
+  "ctaHeading": "Ready to experience the benefits?",
+  "ctaBody": "Clara will recommend the right combination of services for your body and your goals. All bookings are by appointment — call or text to get started.",
+  "ctaLink": "Book your session"
+}
