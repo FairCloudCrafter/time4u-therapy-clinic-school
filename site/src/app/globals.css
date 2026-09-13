@@ -193,20 +193,27 @@ p {
   position: relative;
 }
 
-.mobile-menu summary {
-  list-style: none;
-  cursor: pointer;
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
   border: 1px solid rgba(19, 60, 106, 0.2);
   border-radius: 999px;
-  padding: 0.55rem 0.8rem;
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: var(--ink);
   background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  padding: 0;
 }
 
-.mobile-menu summary::-webkit-details-marker {
-  display: none;
+.menu-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 700;
 }
 
 .mobile-menu-panel {

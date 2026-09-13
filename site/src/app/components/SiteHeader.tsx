@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import Logo from "./Logo";
 import { business, phoneDigits } from "../lib/business";
 
@@ -11,6 +14,31 @@ const navLinks = [
 ];
 
 export default function SiteHeader() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
   return (
     <>
       <div className="topbar">
@@ -44,21 +72,34 @@ export default function SiteHeader() {
             <a className="btn btn-outline" href={`tel:${phoneDigits}`}>
               Call
             </a>
-            <Link className="btn btn-primary" href="/contact">
-              Book Now
-            </Link>
-            <details className="mobile-menu">
-              <summary aria-label="Toggle navigation menu">Menu</summary>
-              <div className="mobile-menu-panel">
-                <Link href="/">Home</Link>
-                {navLinks.map((link) => (
-                  <Link key={link.href} href={link.href}>
-                    {link.label}
+            <div ref={menuRef} className="mobile-menu">
+              <button
+                type="button"
+                className="menu-toggle"
+                aria-label="Toggle navigation menu"
+                aria-expanded={menuOpen}
+                onClick={() => setMenuOpen((current) => !current)}
+              >
+                <span className="menu-icon" aria-hidden="true">
+                  ☰
+                </span>
+              </button>
+              {menuOpen && (
+                <div className="mobile-menu-panel" role="menu" aria-label="Mobile navigation menu">
+                  <Link href="/" onClick={() => setMenuOpen(false)}>
+                    Home
                   </Link>
-                ))}
-                <Link href="/contact">Contact</Link>
-              </div>
-            </details>
+                  {navLinks.map((link) => (
+                    <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>
+                      {link.label}
+                    </Link>
+                  ))}
+                  <Link href="/contact" onClick={() => setMenuOpen(false)}>
+                    Contact
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </header>
