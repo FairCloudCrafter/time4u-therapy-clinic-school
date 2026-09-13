@@ -38,4 +38,8 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# lockfile — generated locally with Windows-specific native binaries.
+# Cloudflare (Linux) must resolve its own platform variants via npm install.
+package-lock.json
 next-env.d.ts
