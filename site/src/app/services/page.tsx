@@ -48,6 +48,9 @@ export default function ServicesPage() {
             {services.serviceGroups.map((group) => (
               <article className="service-card" key={group.title} id={group.title.toLowerCase().replace(/\s+/g, "-")}>
                 <h3>{group.title}</h3>
+                {"description" in group && group.description && (
+                  <p className="service-card-desc">{group.description as string}</p>
+                )}
                 <ul className="service-list price-list">
                   {group.items.map((item) => (
                     <li key={`${group.title}-${item.name}`}>

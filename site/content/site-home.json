@@ -94,5 +94,9 @@
   "trustedHeading": "Trusted, licensed care",
   "trustedBody": "Clara Schoonover, L.M.T. serves Chickasha with professional therapeutic massage and bodywork focused on lasting relief and real comfort.",
   "trustedBadges": ["License #84488", "ABMP Member", "By Appointment"],
-  "credentialsLink": "See credentials"
+  "credentialsLink": "See credentials",
+  "giftHeading": "Give the Gift of Wellness",
+  "giftBody": "Gift certificates are available for every service. Whether it\u2019s a birthday, a holiday, or simply showing someone you care — a massage from Time 4U is a gift that genuinely helps.",
+  "giftNote": "Call or text to purchase a gift certificate in any amount.",
+  "giftCta": "Purchase a Gift Certificate"
 }

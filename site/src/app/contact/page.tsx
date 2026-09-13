@@ -59,6 +59,47 @@ export default function ContactPage() {
           </article>
         </div>
       </section>
+
+      {/* Office hours */}
+      <section className="section-pad">
+        <div className="wrap">
+          <article className="note-card">
+            <h3>Office hours</h3>
+            <div className="hours-table">
+              {business.hoursByDay.map((row) => (
+                <div key={row.day} className={`hours-row${row.hours ? "" : " closed"}`}>
+                  <span>{row.day}</span>
+                  <span>{row.hours ?? "Not available"}</span>
+                </div>
+              ))}
+            </div>
+            <p className="tiny" style={{ marginTop: "0.9rem" }}>
+              {business.bookingNote}. Please schedule 1–2 weeks in advance.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      {/* Gift certificates */}
+      <section className="section-pad">
+        <div className="wrap">
+          <article className="gift-cert-band">
+            <div className="gift-cert-icon" aria-hidden="true">🎁</div>
+            <div>
+              <h2>Give the Gift of Wellness</h2>
+              <p>{business.giftCertNote}</p>
+            </div>
+            <div className="hero-cta">
+              <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
+                Purchase a Gift Certificate
+              </a>
+              <a className="btn btn-outline" href={`sms:${phoneDigits}`}>
+                Text to Purchase
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
   );
 }

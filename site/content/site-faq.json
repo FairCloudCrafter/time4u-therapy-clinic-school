@@ -28,8 +28,8 @@
       "a": "Yes. Before your session, Clara will ask general health questions. Please share any health problems or medications. If you're under a doctor's care, a written recommendation may be needed before your session."
     },
     {
-      "q": "Do you accept insurance?",
-      "a": "No — Time 4U is self-pay only."
+      "q": "Do you accept insurance or HSA/FSA cards?",
+      "a": "We do not accept health insurance billing — Time 4U is self-pay only. However, many clients pay with HSA (Health Savings Account) or FSA (Flexible Spending Account) cards. These pre-tax accounts often cover therapeutic massage. Check with your card provider to confirm your plan\u2019s eligibility."
     },
     {
       "q": "How do I book?",

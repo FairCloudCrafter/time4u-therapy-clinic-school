@@ -64,7 +64,18 @@ export default function SiteFooter() {
         <div className="wrap">
           <p className="tiny footer-legal">
             &copy; {year} {business.name} &middot; Clara Schoonover, L.M.T. &middot; Licensed in Oklahoma
+            {business.abmpMember && <> &middot; ABMP Member</>}
           </p>
+          {(business.facebook || business.instagram) && (
+            <p className="tiny footer-social">
+              {business.facebook && (
+                <a href={business.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
+              )}
+              {business.instagram && (
+                <a href={business.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+              )}
+            </p>
+          )}
         </div>
       </footer>
     </>

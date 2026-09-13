@@ -199,6 +199,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Gift certificates */}
+      <section className="section-pad">
+        <div className="wrap">
+          <article className="gift-cert-band">
+            <div className="gift-cert-icon" aria-hidden="true">🎁</div>
+            <div>
+              <h2>{home.giftHeading}</h2>
+              <p>{home.giftBody}</p>
+              <p className="tiny">{home.giftNote}</p>
+            </div>
+            <div className="hero-cta">
+              <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
+                {home.giftCta}
+              </a>
+              <a className="btn btn-outline" href={`sms:${phoneDigits}`}>
+                Text to Purchase
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section id="contact" className="section-pad">
         <div className="wrap grid-2">
           <article className="card">
