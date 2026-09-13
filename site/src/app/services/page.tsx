@@ -46,7 +46,7 @@ export default function ServicesPage() {
 
           <div className="service-grid" style={{ marginTop: "1.2rem" }}>
             {services.serviceGroups.map((group) => (
-              <article className="service-card" key={group.title}>
+              <article className="service-card" key={group.title} id={group.title.toLowerCase().replace(/\s+/g, "-")}>
                 <h3>{group.title}</h3>
                 <ul className="service-list price-list">
                   {group.items.map((item) => (

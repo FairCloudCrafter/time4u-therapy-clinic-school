@@ -3,6 +3,7 @@ import { business, fullAddress, phoneDigits } from "../lib/business";
 
 const footerLinks = [
   { href: "/services", label: "Services" },
+  { href: "/benefits", label: "Benefits" },
   { href: "/about", label: "About" },
   { href: "/credentials", label: "Credentials" },
   { href: "/faq", label: "FAQ" },

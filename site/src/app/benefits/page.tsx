@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import benefitsContent from "../../../content/site-benefits.json";
-import { business, phoneDigits } from "../lib/business";
+import { phoneDigits } from "../lib/business";
 
 export const metadata: Metadata = {
   title: "Benefits of Services",
@@ -19,6 +19,12 @@ export default function BenefitsPage() {
           <span className="eyebrow">{content.eyebrow}</span>
           <h1>{content.headline}</h1>
           <p>{content.intro}</p>
+          {/* Quick jump nav */}
+          <nav className="service-jump-nav" aria-label="Jump to service">
+            {content.services.map((service) => (
+              <a key={service.id} href={`#${service.id}`}>{service.name}</a>
+            ))}
+          </nav>
         </div>
       </section>
 
@@ -38,19 +44,26 @@ export default function BenefitsPage() {
       </section>
 
       {/* Service benefit sections */}
-      {content.services.map((service, index) => (
+      {content.services.map((service) => (
         <section
           key={service.id}
           id={service.id}
-          className="section-pad"
-          style={{ background: index % 2 === 1 ? "var(--surface)" : undefined }}
+          className="section-pad benefits-service-section"
         >
           <div className="wrap">
             <div className="benefits-service-layout">
               <div className="benefits-service-header">
                 <span className="eyebrow">{service.tagline}</span>
                 <h2>{service.name}</h2>
-                <p style={{ maxWidth: "52ch" }}>{service.description}</p>
+                <p>{service.description}</p>
+                <div className="benefits-section-cta">
+                  <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
+                    Book a session
+                  </a>
+                  <Link className="btn btn-ghost" href="/services/">
+                    See pricing
+                  </Link>
+                </div>
               </div>
               <div className="benefits-service-body">
                 <ul className="benefit-list">
@@ -62,16 +75,9 @@ export default function BenefitsPage() {
                   <p className="prep-tip">{service.prepTip as string}</p>
                 )}
                 {"disclaimer" in service && service.disclaimer && (
-                  <p className="tiny" style={{ marginTop: "1.25rem", opacity: 0.65 }}>
-                    {service.disclaimer as string}
-                  </p>
+                  <p className="benefit-disclaimer">{service.disclaimer as string}</p>
                 )}
               </div>
-            </div>
-            <div style={{ marginTop: "1.5rem" }}>
-              <Link className="btn btn-outline" href={`/services#${service.id}`}>
-                View pricing for {service.name}
-              </Link>
             </div>
           </div>
         </section>
