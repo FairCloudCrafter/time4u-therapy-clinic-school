@@ -1,13 +1,10 @@
 {
   "name": "time4u-therapy-clinic-school",
   "private": true,
-  "workspaces": [
-    "site"
-  ],
   "scripts": {
-    "install-site": "npm install --workspace site",
-    "build": "npm run build --workspace site",
-    "dev": "npm run dev --workspace site",
-    "start": "npm run start --workspace site"
+    "install-site": "npm install --prefix site",
+    "build": "npm install --prefix site && npm --prefix site run build",
+    "dev": "npm --prefix site run dev",
+    "start": "npm --prefix site run start"
   }
 }
