@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import contactContent from "../../../content/site-contact.json";
 import { business, phoneDigits, fullAddress } from "../lib/business";
 
 export const metadata: Metadata = {
@@ -8,27 +9,25 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const contact = contactContent;
+
   return (
     <main>
       <section className="page-hero">
         <div className="wrap">
-          <span className="eyebrow">Contact &amp; Book</span>
-          <h1>Let&apos;s get you on the schedule.</h1>
-          <p>
-            Call or text to book your appointment. Clara will help you choose the
-            right service and find a time that works for you.
-          </p>
+          <span className="eyebrow">{contact.eyebrow}</span>
+          <h1>{contact.headline}</h1>
+          <p>{contact.intro}</p>
         </div>
       </section>
 
       <section className="section-pad">
         <div className="wrap grid-2">
           <article className="card">
-            <h3>Book an appointment</h3>
+            <h3>{contact.bookHeading}</h3>
             <ul className="steps">
               <li>
-                Call or text:{" "}
-                <a href={`tel:${phoneDigits}`}>{business.phone}</a>
+                Call or text: <a href={`tel:${phoneDigits}`}>{business.phone}</a>
               </li>
               <li>{fullAddress}</li>
               <li>Hours: {business.hours}</li>
@@ -46,18 +45,15 @@ export default function ContactPage() {
           </article>
 
           <article className="card">
-            <h3>Good to know</h3>
+            <h3>{contact.goodToKnowHeading}</h3>
             <ul className="steps">
-              <li>Appointments are scheduled 1&ndash;2 weeks in advance.</li>
-              <li>A credit card is kept on file to hold your appointment.</li>
-              <li>Please give 24 hours&apos; notice to cancel.</li>
-              <li>
-                Arriving more than 15 minutes late may be treated as a no-show.
-              </li>
+              {contact.goodToKnowItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
             <p className="section-cta">
               <a className="btn btn-outline" href="/faq">
-                Read full policies
+                {contact.faqLink}
               </a>
             </p>
           </article>

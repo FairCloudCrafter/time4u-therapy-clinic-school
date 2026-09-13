@@ -1,0 +1,98 @@
+{
+  "eyebrow": "Licensed · Professional · Local",
+  "headline": "Relief that feels personal, professional, and lasting.",
+  "subheadline": "Time 4U Therapy Massage in Chickasha is where stress relief, pain management, and deeper body wellness come together in a calm, professional setting designed around your needs.",
+  "ctaPrimary": "Book Your Visit",
+  "ctaSecondary": "Text for Availability",
+  "ctaTertiary": "Explore Services",
+  "trustBadges": [
+    { "value": "4.8 out of 5", "label": "Google rating" },
+    { "value": "Licensed", "label": "Oklahoma therapist" },
+    { "value": "1–2 wks", "label": "Typical booking window" }
+  ],
+  "proofCards": [
+    {
+      "eyebrow": "Care that fits",
+      "title": "Massage for stress, pain, and recovery.",
+      "body": "Every session is tailored to what your body needs most—whether that is deep relief, gentle relaxation, or better mobility."
+    },
+    {
+      "eyebrow": "Experienced",
+      "title": "Licensed and focused on comfort.",
+      "body": "Clara helps you feel informed and comfortable from intake through the treatment itself, with clear guidance every step of the way."
+    },
+    {
+      "eyebrow": "Calm setting",
+      "title": "Restorative care in a professional space.",
+      "body": "The atmosphere is quiet, soothing, and supportive so you can settle in and truly relax."
+    }
+  ],
+  "processHeading": "Personalized care designed to help you feel better.",
+  "processIntro": "Relief, recovery, and calm should feel easy to access. That is why every visit is shaped around comfort, trust, and real results instead of a one-size-fits-all approach.",
+  "processSteps": [
+    {
+      "number": "1",
+      "title": "Start with listening.",
+      "body": "Your concerns, comfort level, and goals guide the treatment plan from the very beginning."
+    },
+    {
+      "number": "2",
+      "title": "Receive targeted treatment.",
+      "body": "Each session uses the right balance of therapeutic pressure, technique, and attention."
+    },
+    {
+      "number": "3",
+      "title": "Leave feeling lighter.",
+      "body": "Supportive care helps you feel calmer, more mobile, and better equipped to take on the week."
+    }
+  ],
+  "servicesHeading": "Massage and wellness care that fits your needs.",
+  "servicesIntro": "Whether you need relief from chronic tension, a reset from a busy week, or a more nurturing wellness experience, Clara helps you choose the right approach without the guesswork.",
+  "serviceCards": [
+    {
+      "title": "Therapeutic Massage",
+      "image": "/images/massage-back.jpg",
+      "alt": "Deep tissue therapeutic massage",
+      "body": "Deep tissue, medical, orthopedic, prenatal, and lymphatic approaches for real relief and longer-lasting comfort."
+    },
+    {
+      "title": "Reflexology & Bodywork",
+      "image": "/images/spa-calm.jpg",
+      "alt": "Calm spa setting with candles and towels",
+      "body": "Targeted techniques to reduce stress, improve circulation, and help you feel more balanced."
+    },
+    {
+      "title": "Waxing & Wellness",
+      "image": "/images/oils.jpg",
+      "alt": "Essential oils used in treatments",
+      "body": "Professional waxing and body care in a clean, comfortable environment that supports your routine."
+    }
+  ],
+  "whyChooseHeading": "What makes the experience different",
+  "whyChooseBody": "You get a licensed therapist who listens first and adjusts care to your body, comfort level, and goals instead of using a one-size-fits-all approach.",
+  "whyChooseBadges": ["Licensed Therapist", "Personalized Care", "Professional & Discreet", "Local & Trusted"],
+  "expectationsHeading": "What to expect",
+  "expectations": [
+    "A warm, quiet treatment room that helps you settle in.",
+    "Respectful draping, comfort, and clear communication.",
+    "Techniques chosen based on your symptoms and goals.",
+    "Honest guidance about what will actually help you feel better."
+  ],
+  "spotlight": {
+    "image": "/images/spa-calm.jpg",
+    "alt": "Relaxing spa atmosphere",
+    "title": "A calm space to truly unwind.",
+    "body": "From the moment you walk in, everything is designed to help you relax, feel safe, and leave lighter than when you arrived."
+  },
+  "reviewsHeading": "What clients are saying",
+  "ctaBandHeading": "Ready for relief that actually lasts?",
+  "ctaBandBody": "Book a massage session or learn more about the School of Massage Therapy and the growing local training opportunity in Chickasha.",
+  "ctaBandPrimary": "Call Now",
+  "ctaBandSecondary": "School Info",
+  "contactHeading": "Ready to book?",
+  "contactBody": "Call or text — appointments are scheduled 1–2 weeks ahead.",
+  "trustedHeading": "Trusted, licensed care",
+  "trustedBody": "Clara Schoonover, L.M.T. serves Chickasha with professional therapeutic massage and bodywork focused on lasting relief and real comfort.",
+  "trustedBadges": ["License #84488", "ABMP Member", "By Appointment"],
+  "credentialsLink": "See credentials"
+}

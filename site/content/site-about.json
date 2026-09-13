@@ -1,0 +1,39 @@
+{
+  "eyebrow": "About",
+  "headline": "Meet Clara Schoonover, L.M.T.",
+  "intro": "Skilled, caring, and dedicated to helping every client feel their best — inside and out.",
+  "image": "/images/massage-back.jpg",
+  "imageAlt": "Clara providing a therapeutic massage",
+  "paragraphs": [
+    "Clara Schoonover is a licensed massage therapist and cosmetologist who’s been helping people in Chickasha feel more comfortable in their bodies for years.",
+    "Her work blends therapeutic massage, soft tissue mobilization, orthopedic techniques, reflexology, and other evidence-informed approaches to help clients feel relief, support, and lasting comfort.",
+    "Every session is shaped around your goals—whether you need stress relief, pain management, better mobility, or simply a chance to reset."
+  ],
+  "whyChooseHeading": "Why clients choose Clara",
+  "whyChooseItems": [
+    "Licensed Massage Therapist (L.M.T.)",
+    "License #84488 — Oklahoma",
+    "Personalized treatment plans built around your body and goals",
+    "Member, Associated Bodywork & Massage Professionals",
+    "Serving Chickasha with professional, respectful care"
+  ],
+  "specialtiesHeading": "Specialties & techniques",
+  "specialtiesIntro": "Trained approaches Clara draws on to tailor every session.",
+  "specialties": [
+    "Medical Massage",
+    "Deep Tissue & Sculpting",
+    "Orthopedic Techniques (cervical pain)",
+    "Therapeutic Reflexology",
+    "Sciatica Relief",
+    "Fibromyalgia Techniques",
+    "Prenatal / Pregnancy Massage",
+    "Carpal Tunnel Therapy",
+    "Craniosacral Therapy",
+    "Lymphatic Massage",
+    "Cupping & Myofascial Release",
+    "Breast Massage (certified)"
+  ],
+  "ctaHeading": "Ready to feel better?",
+  "ctaBody": "Call or text to schedule your session with Clara.",
+  "ctaButton": "Call"
+}

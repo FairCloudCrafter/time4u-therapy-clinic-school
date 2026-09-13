@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import schoolContent from "../../../content/site-school.json";
 import { business, phoneDigits } from "../lib/business";
 
 export const metadata: Metadata = {
@@ -8,76 +9,61 @@ export const metadata: Metadata = {
 };
 
 export default function SchoolPage() {
+  const school = schoolContent;
+
   return (
     <main>
       <section className="page-hero">
         <div className="wrap">
-          <span className="eyebrow">School of Massage Therapy</span>
-          <h1>Massage therapy training is coming to Chickasha.</h1>
-          <p>
-            Time 4U is growing into a clinic and a school. We&apos;re building a
-            training program to help the next generation of therapists learn the
-            craft the right way — with hands-on, professional instruction.
-          </p>
+          <span className="eyebrow">{school.eyebrow}</span>
+          <h1>{school.headline}</h1>
+          <p>{school.intro}</p>
         </div>
       </section>
 
       <section className="section-pad">
         <div className="wrap grid-2">
           <article className="card">
-            <h3>Coming Soon</h3>
-            <p>
-              Program details, class schedules, and enrollment information are on
-              the way. Check back soon — or give us a call and we&apos;ll let you
-              know the moment enrollment opens.
-            </p>
+            <h3>{school.cardHeading}</h3>
+            <p>{school.cardBody}</p>
             <div className="badge-row">
-              <span className="badge">Hands-on Training</span>
-              <span className="badge">Professional Instruction</span>
-              <span className="badge">Local to Chickasha</span>
+              {school.cardBadges.map((badge) => (
+                <span className="badge" key={badge}>{badge}</span>
+              ))}
             </div>
           </article>
           <article className="card">
-            <h3>Be first to know</h3>
-            <p>
-              Interested in becoming a massage therapist? Give us a call or send
-              a text, and you&apos;ll be among the first to hear about start
-              dates and how to apply.
-            </p>
-            <p className="section-cta">
+            <h3>{school.interestHeading}</h3>
+            <p>{school.interestBody}</p>
+            <p style={{ marginTop: "1rem" }}>
               <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
-                Call to ask a question
+                {school.ctaPrimary}
               </a>
             </p>
           </article>
         </div>
       </section>
 
-      {business.studentPricing.length > 0 && (
-        <section className="section-pad">
-          <div className="wrap">
-            <article className="card">
-              <h3>Student Massages</h3>
-              <p>
-                Practice massages given by our students are available now at
-                reduced pricing while our program grows.
-              </p>
-              <ul className="steps">
-                {business.studentPricing.map((item) => (
-                  <li key={item.service}>
-                    <strong>{item.price}</strong> — {item.service}
-                  </li>
-                ))}
-              </ul>
-              <p className="section-cta">
-                <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
-                  Call to book a student massage
-                </a>
-              </p>
-            </article>
-          </div>
-        </section>
-      )}
+      <section className="section-pad">
+        <div className="wrap">
+          <article className="card">
+            <h3>{school.studentHeading}</h3>
+            <p>{school.studentIntro}</p>
+            <ul className="steps">
+              {business.studentPricing.map((item) => (
+                <li key={item.service}>
+                  <strong>{item.price}</strong> — {item.service}
+                </li>
+              ))}
+            </ul>
+            <p style={{ marginTop: "1rem" }}>
+              <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
+                {school.ctaSecondary}
+              </a>
+            </p>
+          </article>
+        </div>
+      </section>
     </main>
   );
 }

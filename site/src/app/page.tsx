@@ -1,105 +1,114 @@
 import Link from "next/link";
+import homeContent from "../../content/site-home.json";
 import { basePath } from "./lib/basePath";
 import { business, phoneDigits, fullAddress } from "./lib/business";
 
 export default function Home() {
+  const home = homeContent;
+
   return (
     <main>
       <section className="hero">
         <div className="wrap hero-shell">
           <div className="hero-copy">
-            <span className="eyebrow">Licensed &middot; Professional &middot; Local</span>
-            <h1>Therapeutic massage that treats you like a person, not a number.</h1>
-            <p>
-              Welcome to Time 4U Therapy Massage in Chickasha, Oklahoma. With
-              Clara Schoonover, L.M.T., you get skilled, results-focused bodywork
-              in a calm, comfortable setting — tailored to your body and your
-              goals.
-            </p>
+            <span className="eyebrow">{home.eyebrow}</span>
+            <h1 className="hero-title">{home.headline}</h1>
+            <p className="hero-subtext">{home.subheadline}</p>
             <div className="hero-cta">
               <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
-                Call to Book
+                {home.ctaPrimary}
               </a>
               <a className="btn btn-outline" href={`sms:${phoneDigits}`}>
-                Text to Book
+                {home.ctaSecondary}
               </a>
               <Link className="btn btn-outline" href="/services">
-                View Services
+                {home.ctaTertiary}
               </Link>
             </div>
-              <div className="hero-facts">
-                <span>{business.addressLine}</span>
-                <span>{business.phone}</span>
-                <span>{business.hours}</span>
-              </div>
+            <div className="results-strip" aria-label="Clinic results and trust indicators">
+              {home.trustBadges.map((badge) => (
+                <div className="result-pill" key={badge.label}>
+                  <strong>{badge.value}</strong>
+                  <span>{badge.label}</span>
+                </div>
+              ))}
             </div>
-            <div className="hero-media">
-              <img
-                src={`${basePath}/images/hero-massage.jpg`}
-                alt="Therapeutic massage session at Time 4U"
-                className="hero-img"
-              />
+            <div className="hero-facts">
+              <span>{business.addressLine}</span>
+              <span>{business.phone}</span>
+              <span>{business.hours}</span>
             </div>
           </div>
-        </section>
 
-        <section className="section-pad">
-          <div className="wrap">
-            <div className="section-head">
-              <h2>Services</h2>
-              <p>
-                Therapeutic and relaxation bodywork, plus waxing and wellness
-                services — each session tailored to you.
-              </p>
+          <div className="hero-aside">
+            <h2>Why clients choose Time 4U</h2>
+            <ul>
+              <li>Personalized care that listens to your body and your goals.</li>
+              <li>Therapeutic techniques designed for relief, recovery, and calm.</li>
+              <li>A quiet, supportive environment that helps you truly reset.</li>
+            </ul>
+            <div className="badge-row" style={{ marginTop: "1rem" }}>
+              <span className="badge">Deep Tissue</span>
+              <span className="badge">Prenatal</span>
+              <span className="badge">Reflexology</span>
+              <span className="badge">Waxing</span>
             </div>
-            <div className="cards">
-            <article className="card feature-card">
-              <div className="feature-media">
-                <img
-                  src={`${basePath}/images/massage-back.jpg`}
-                  alt="Deep tissue therapeutic massage"
-                />
-              </div>
-              <div className="feature-body">
-                <h3>Therapeutic Massage</h3>
-                <p>
-                  Deep tissue, medical, orthopedic, prenatal, lymphatic and more
-                  — focused on real relief from pain and tension.
-                </p>
-              </div>
-            </article>
-            <article className="card feature-card">
-              <div className="feature-media">
-                <img
-                  src={`${basePath}/images/spa-calm.jpg`}
-                  alt="Calm spa setting with candles and towels"
-                />
-              </div>
-              <div className="feature-body">
-                <h3>Reflexology &amp; Bodywork</h3>
-                <p>
-                  Foot and hand reflexology, cupping, hot stone and myofascial
-                  techniques to help your body reset and recover.
-                </p>
-              </div>
-            </article>
-            <article className="card feature-card">
-              <div className="feature-media">
-                <img
-                  src={`${basePath}/images/oils.jpg`}
-                  alt="Essential oils used in treatments"
-                />
-              </div>
-              <div className="feature-body">
-                <h3>Waxing &amp; Wellness</h3>
-                <p>
-                  Professional waxing and sugaring, ear candling, and detox
-                  services with clear prep and aftercare guidance.
-                </p>
-              </div>
-            </article>
           </div>
-          <p className="section-cta">
+        </div>
+      </section>
+
+      <section className="section-pad">
+        <div className="wrap">
+          <div className="proof-grid">
+            {home.proofCards.map((card) => (
+              <article className="info-card" key={card.title}>
+                <span className="eyebrow">{card.eyebrow}</span>
+                <h3>{card.title}</h3>
+                <p>{card.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad">
+        <div className="wrap">
+          <div className="section-head">
+            <h2>{home.processHeading}</h2>
+            <p>{home.processIntro}</p>
+          </div>
+          <div className="proof-grid premium-value-grid">
+            {home.processSteps.map((step) => (
+              <article className="info-card value-card" key={step.number}>
+                <span className="eyebrow">{step.number}</span>
+                <h3>{step.title}</h3>
+                <p>{step.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad">
+        <div className="wrap">
+          <div className="section-head">
+            <h2>{home.servicesHeading}</h2>
+            <p>{home.servicesIntro}</p>
+          </div>
+          <div className="cards">
+            {home.serviceCards.map((card) => (
+              <article className="feature-card" key={card.title}>
+                <div className="feature-media">
+                  <img src={`${basePath}${card.image}`} alt={card.alt} />
+                </div>
+                <div className="feature-body">
+                  <h3>{card.title}</h3>
+                  <p>{card.body}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <p style={{ marginTop: "1rem" }}>
             <Link className="btn btn-primary" href="/services">
               See all services
             </Link>
@@ -110,25 +119,20 @@ export default function Home() {
       <section className="section-pad">
         <div className="wrap grid-2">
           <article className="card">
-            <h3>Why clients choose Time 4U</h3>
-            <p>
-              You get a licensed therapist who listens first, then delivers the
-              right techniques for your body — not a one-size-fits-all routine.
-            </p>
+            <h3>{home.whyChooseHeading}</h3>
+            <p>{home.whyChooseBody}</p>
             <div className="badge-row">
-              <span className="badge">Licensed Therapist</span>
-              <span className="badge">Personalized Care</span>
-              <span className="badge">Professional &amp; Discreet</span>
-              <span className="badge">Local &amp; Trusted</span>
+              {home.whyChooseBadges.map((badge) => (
+                <span className="badge" key={badge}>{badge}</span>
+              ))}
             </div>
           </article>
           <article className="card">
-            <h3>What to expect</h3>
+            <h3>{home.expectationsHeading}</h3>
             <ul className="steps">
-              <li>A warm, quiet, comfortable treatment room</li>
-              <li>Proper draping and respect for your comfort at all times</li>
-              <li>Techniques matched to your condition and pain level</li>
-              <li>Honest guidance on what will actually help</li>
+              {home.expectations.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
           </article>
         </div>
@@ -136,21 +140,16 @@ export default function Home() {
 
       <section className="section-pad">
         <div className="wrap">
-          <article className="image-band">
-            <div className="image-band-media">
-              <img
-                src={`${basePath}/images/spa-calm.jpg`}
-                alt="Relaxing spa atmosphere"
-              />
+          <article className="card" style={{ display: "grid", gap: "1rem" }}>
+            <div className="feature-media" style={{ margin: "-1.1rem -1.1rem 0" }}>
+              <img src={`${basePath}${home.spotlight.image}`} alt={home.spotlight.alt} />
             </div>
-            <div className="image-band-body">
-              <h2>A calm space to truly unwind</h2>
-              <p>
-                From the moment you arrive, everything is set up for your comfort
-                — a warm, quiet room, soothing touches, and care that&apos;s
-                focused entirely on you.
-              </p>
-              <p className="section-cta">
+            <div>
+              <h2 style={{ margin: 0, fontFamily: '"Cormorant Garamond", Georgia, serif', fontSize: "clamp(1.8rem, 4vw, 2.7rem)" }}>
+                {home.spotlight.title}
+              </h2>
+              <p>{home.spotlight.body}</p>
+              <p style={{ marginTop: "1rem" }}>
                 <Link className="btn btn-primary" href="/contact">
                   Book your visit
                 </Link>
@@ -163,11 +162,8 @@ export default function Home() {
       <section className="section-pad">
         <div className="wrap">
           <div className="section-head">
-            <h2>What clients are saying</h2>
-            <p>
-              Rated {business.reviewsRating} on Google. Here&apos;s what local
-              clients share.
-            </p>
+            <h2>{home.reviewsHeading}</h2>
+            <p>Rated {business.reviewsRating} on Google. Real feedback from local clients.</p>
           </div>
           <div className="cards">
             {business.reviews.map((review) => (
@@ -188,15 +184,17 @@ export default function Home() {
         <div className="wrap">
           <article className="cta-band">
             <div>
-              <h2>New: School of Massage Therapy</h2>
-              <p>
-                Training and classes are on the way. Call or text us to be the
-                first to know when enrollment opens.
-              </p>
+              <h2>{home.ctaBandHeading}</h2>
+              <p>{home.ctaBandBody}</p>
             </div>
-            <Link className="btn btn-primary" href="/school">
-              Learn more
-            </Link>
+            <div className="cta-actions">
+              <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
+                {home.ctaBandPrimary}
+              </a>
+              <Link className="btn btn-outline" href="/school">
+                {home.ctaBandSecondary}
+              </Link>
+            </div>
           </article>
         </div>
       </section>
@@ -204,8 +202,8 @@ export default function Home() {
       <section id="contact" className="section-pad">
         <div className="wrap grid-2">
           <article className="card">
-            <h3>Ready to book?</h3>
-            <p>Call or text — appointments are scheduled 1&ndash;2 weeks ahead.</p>
+            <h3>{home.contactHeading}</h3>
+            <p>{home.contactBody}</p>
             <ul className="steps">
               <li>Call or text: {business.phone}</li>
               <li>{fullAddress}</li>
@@ -224,19 +222,16 @@ export default function Home() {
             </div>
           </article>
           <article className="card">
-            <h3>Trusted, licensed care</h3>
-            <p>
-              Clara Schoonover, L.M.T. — serving Chickasha with professional,
-              therapeutic massage and bodywork since 2008.
-            </p>
+            <h3>{home.trustedHeading}</h3>
+            <p>{home.trustedBody}</p>
             <div className="badge-row">
-              <span className="badge">License #{business.licenseNumber}</span>
-              <span className="badge">ABMP Member</span>
-              <span className="badge">By Appointment</span>
+              {home.trustedBadges.map((badge) => (
+                <span className="badge" key={badge}>{badge}</span>
+              ))}
             </div>
-            <p className="section-cta">
+            <p style={{ marginTop: "1rem" }}>
               <Link className="btn btn-outline" href="/credentials">
-                See credentials
+                {home.credentialsLink}
               </Link>
             </p>
           </article>

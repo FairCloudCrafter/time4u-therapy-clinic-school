@@ -5,16 +5,10 @@ backend:
   name: github
   repo: FairCloudCrafter/time4u-therapy-clinic-school
   branch: main
-  # OAuth login handler — Cloudflare Access-gated worker (Clara logs in by email).
   base_url: https://cms-auth.time4utherapymassageclinicandschool.com
 
-# Lets us preview/test the editor locally against real files:
-#   in site/: npx decap-server   (one terminal)
-#   in site/: npm run dev         (another terminal), then open /admin
-# Ignored in production — only active when the admin is opened from localhost.
 local_backend: true
 
-# Images uploaded through the CMS land in the site's public/images folder.
 media_folder: "site/public/images"
 public_folder: "/images"
 
@@ -56,3 +50,186 @@ collections:
               - { name: quote, label: "Review text", widget: text }
               - { name: author, label: "Reviewer name", widget: string }
               - { name: source, label: "Source", widget: string, default: "Google review" }
+
+  - name: homePage
+    label: "Home Page"
+    files:
+      - name: home
+        label: "Home page content"
+        file: "site/content/site-home.json"
+        fields:
+          - { name: eyebrow, label: "Eyebrow", widget: string }
+          - { name: headline, label: "Headline", widget: string }
+          - { name: subheadline, label: "Subheadline", widget: text }
+          - { name: ctaPrimary, label: "Primary CTA text", widget: string }
+          - { name: ctaSecondary, label: "Secondary CTA text", widget: string }
+          - { name: ctaTertiary, label: "Tertiary CTA text", widget: string }
+          - name: trustBadges
+            label: "Trust badges"
+            widget: list
+            fields:
+              - { name: value, label: "Value", widget: string }
+              - { name: label, label: "Label", widget: string }
+          - name: proofCards
+            label: "Proof cards"
+            widget: list
+            fields:
+              - { name: eyebrow, label: "Eyebrow", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: body, label: "Body", widget: text }
+          - { name: processHeading, label: "Process heading", widget: string }
+          - { name: processIntro, label: "Process intro", widget: text }
+          - name: processSteps
+            label: "Process steps"
+            widget: list
+            fields:
+              - { name: number, label: "Number", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: body, label: "Body", widget: text }
+          - { name: servicesHeading, label: "Services heading", widget: string }
+          - { name: servicesIntro, label: "Services intro", widget: text }
+          - name: serviceCards
+            label: "Service cards"
+            widget: list
+            fields:
+              - { name: title, label: "Title", widget: string }
+              - { name: image, label: "Image", widget: image }
+              - { name: alt, label: "Image alt text", widget: string }
+              - { name: body, label: "Body", widget: text }
+          - { name: whyChooseHeading, label: "Why choose heading", widget: string }
+          - { name: whyChooseBody, label: "Why choose body", widget: text }
+          - { name: whyChooseBadges, label: "Why choose badges", widget: list, field: { name: item, label: "Badge", widget: string } }
+          - { name: expectationsHeading, label: "Expectations heading", widget: string }
+          - { name: expectations, label: "Expectations", widget: list, field: { name: item, label: "Expectation", widget: string } }
+          - name: spotlight
+            label: "Spotlight section"
+            widget: object
+            fields:
+              - { name: image, label: "Image", widget: image }
+              - { name: alt, label: "Image alt text", widget: string }
+              - { name: title, label: "Title", widget: string }
+              - { name: body, label: "Body", widget: text }
+          - { name: reviewsHeading, label: "Reviews heading", widget: string }
+          - { name: ctaBandHeading, label: "CTA heading", widget: string }
+          - { name: ctaBandBody, label: "CTA body", widget: text }
+          - { name: ctaBandPrimary, label: "Primary CTA label", widget: string }
+          - { name: ctaBandSecondary, label: "Secondary CTA label", widget: string }
+          - { name: contactHeading, label: "Contact heading", widget: string }
+          - { name: contactBody, label: "Contact body", widget: text }
+          - { name: trustedHeading, label: "Trusted heading", widget: string }
+          - { name: trustedBody, label: "Trusted body", widget: text }
+          - { name: trustedBadges, label: "Trusted badges", widget: list, field: { name: item, label: "Badge", widget: string } }
+          - { name: credentialsLink, label: "Credentials link label", widget: string }
+
+  - name: servicesPage
+    label: "Services Page"
+    files:
+      - name: services
+        label: "Services page content"
+        file: "site/content/site-services.json"
+        fields:
+          - { name: eyebrow, label: "Eyebrow", widget: string }
+          - { name: headline, label: "Headline", widget: string }
+          - { name: intro, label: "Intro", widget: text }
+          - { name: careHeading, label: "Care heading", widget: string }
+          - { name: careBody, label: "Care body", widget: text }
+          - { name: careBadges, label: "Care badges", widget: list, field: { name: item, label: "Badge", widget: string } }
+          - { name: popularHeading, label: "Popular services heading", widget: string }
+          - { name: popularItems, label: "Popular services", widget: list, field: { name: item, label: "Service", widget: string } }
+          - name: serviceGroups
+            label: "Service groups"
+            widget: list
+            fields:
+              - { name: title, label: "Group title", widget: string }
+              - { name: items, label: "Items", widget: list, field: { name: item, label: "Service", widget: string } }
+          - { name: pricingHeading, label: "Pricing heading", widget: string }
+          - { name: pricingBody, label: "Pricing body", widget: text }
+          - { name: pricingNote, label: "Pricing note", widget: text }
+          - { name: ctaHeading, label: "CTA heading", widget: string }
+          - { name: ctaBody, label: "CTA body", widget: text }
+          - { name: ctaLink, label: "CTA link label", widget: string }
+
+  - name: aboutPage
+    label: "About Page"
+    files:
+      - name: about
+        label: "About page content"
+        file: "site/content/site-about.json"
+        fields:
+          - { name: eyebrow, label: "Eyebrow", widget: string }
+          - { name: headline, label: "Headline", widget: string }
+          - { name: intro, label: "Intro", widget: string }
+          - { name: image, label: "Hero image", widget: image }
+          - { name: imageAlt, label: "Hero image alt text", widget: string }
+          - { name: paragraphs, label: "Paragraphs", widget: list, field: { name: paragraph, label: "Paragraph", widget: text } }
+          - { name: whyChooseHeading, label: "Why choose heading", widget: string }
+          - { name: whyChooseItems, label: "Why choose items", widget: list, field: { name: item, label: "Item", widget: string } }
+          - { name: specialtiesHeading, label: "Specialties heading", widget: string }
+          - { name: specialtiesIntro, label: "Specialties intro", widget: string }
+          - { name: specialties, label: "Specialties", widget: list, field: { name: item, label: "Specialty", widget: string } }
+          - { name: ctaHeading, label: "CTA heading", widget: string }
+          - { name: ctaBody, label: "CTA body", widget: string }
+          - { name: ctaButton, label: "CTA button label", widget: string }
+
+  - name: contactPage
+    label: "Contact Page"
+    files:
+      - name: contact
+        label: "Contact page content"
+        file: "site/content/site-contact.json"
+        fields:
+          - { name: eyebrow, label: "Eyebrow", widget: string }
+          - { name: headline, label: "Headline", widget: string }
+          - { name: intro, label: "Intro", widget: text }
+          - { name: bookHeading, label: "Book heading", widget: string }
+          - { name: goodToKnowHeading, label: "Good to know heading", widget: string }
+          - { name: goodToKnowItems, label: "Steps", widget: list, field: { name: item, label: "Step", widget: string } }
+          - { name: faqLink, label: "FAQ button text", widget: string }
+
+  - name: faqPage
+    label: "FAQ Page"
+    files:
+      - name: faq
+        label: "FAQ page content"
+        file: "site/content/site-faq.json"
+        fields:
+          - { name: eyebrow, label: "Eyebrow", widget: string }
+          - { name: headline, label: "Headline", widget: string }
+          - { name: intro, label: "Intro", widget: text }
+          - name: faqs
+            label: "FAQs"
+            widget: list
+            fields:
+              - { name: q, label: "Question", widget: string }
+              - { name: a, label: "Answer", widget: text }
+          - { name: policiesHeading, label: "Policies heading", widget: string }
+          - { name: policiesIntro, label: "Policies intro", widget: text }
+          - name: policies
+            label: "Policy cards"
+            widget: list
+            fields:
+              - { name: title, label: "Title", widget: string }
+              - { name: body, label: "Body", widget: text }
+          - { name: ctaHeading, label: "CTA heading", widget: string }
+          - { name: ctaBody, label: "CTA body", widget: text }
+          - { name: ctaLink, label: "CTA button text", widget: string }
+
+  - name: schoolPage
+    label: "School Page"
+    files:
+      - name: school
+        label: "School page content"
+        file: "site/content/site-school.json"
+        fields:
+          - { name: eyebrow, label: "Eyebrow", widget: string }
+          - { name: headline, label: "Headline", widget: string }
+          - { name: intro, label: "Intro", widget: text }
+          - { name: cardHeading, label: "Card heading", widget: string }
+          - { name: cardBody, label: "Card body", widget: text }
+          - { name: cardBadges, label: "Card badges", widget: list, field: { name: item, label: "Badge", widget: string } }
+          - { name: interestHeading, label: "Interest heading", widget: string }
+          - { name: interestBody, label: "Interest body", widget: text }
+          - { name: studentHeading, label: "Student heading", widget: string }
+          - { name: studentIntro, label: "Student intro", widget: text }
+          - { name: ctaPrimary, label: "Primary CTA label", widget: string }
+          - { name: ctaSecondary, label: "Secondary CTA label", widget: string }

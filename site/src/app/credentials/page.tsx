@@ -52,8 +52,7 @@ export default function CredentialsPage() {
             ))}
           </div>
           <p className="tiny credentials-note">
-            Diplomas, certifications, and awards are proudly displayed in the
-            clinic. Photos coming soon.
+            Your care matters. Clara keeps a professional standard of safety, comfort, and informed treatment.
           </p>
         </div>
       </section>

@@ -1,0 +1,62 @@
+{
+  "eyebrow": "FAQ & Policies",
+  "headline": "Everything you need to feel comfortable before your visit.",
+  "intro": "New to massage or just have a few questions? Here’s what to expect — and our booking policies.",
+  "faqs": [
+    {
+      "q": "Where will my massage session take place?",
+      "a": "In a warm, comfortable, quiet room. Soft music may be played to help you relax, and you'll lie on a table designed for your comfort."
+    },
+    {
+      "q": "Do I have to be completely undressed?",
+      "a": "You undress to your level of comfort. Most techniques are traditionally performed with the client unclothed, but it's entirely up to you — and you'll be properly draped the entire session."
+    },
+    {
+      "q": "Will I be covered during the session?",
+      "a": "Yes. You'll be properly draped at all times to keep you warm and comfortable. Only the area being worked on is uncovered."
+    },
+    {
+      "q": "What will the massage feel like?",
+      "a": "It depends on the work you need. Sessions often begin with broad, flowing strokes to relax muscle tension, then move to more focused pressure on specific areas. Always tell Clara if you'd like more or less pressure."
+    },
+    {
+      "q": "How will I feel afterward?",
+      "a": "Most people feel deeply relaxed. Many experience relief from long-term aches and, after a short period of feeling slowed down, increased energy and a greater sense of well-being."
+    },
+    {
+      "q": "Are there conditions where massage isn't advised?",
+      "a": "Yes. Before your session, Clara will ask general health questions. Please share any health problems or medications. If you're under a doctor's care, a written recommendation may be needed before your session."
+    },
+    {
+      "q": "Do you accept insurance?",
+      "a": "No — Time 4U is self-pay only."
+    },
+    {
+      "q": "How do I book?",
+      "a": "Call or text. Appointments are by appointment only and are typically scheduled 1–2 weeks in advance."
+    }
+  ],
+  "policiesHeading": "Booking & cancellation policies",
+  "policiesIntro": "These policies help us serve every client fairly and keep appointments running smoothly.",
+  "policies": [
+    {
+      "title": "Scheduling",
+      "body": "By appointment only. Please schedule 1–2 weeks in advance. A credit card is kept on file to hold your appointment."
+    },
+    {
+      "title": "Cancellations",
+      "body": "We ask for 24 hours’ notice to cancel. Without 24 hours’ notice, the full appointment amount may be charged."
+    },
+    {
+      "title": "No-shows & late arrivals",
+      "body": "Arriving more than 15 minutes late may be treated as a no-show. If you arrive late, your session may be shortened to respect the clients who follow you."
+    },
+    {
+      "title": "Payment",
+      "body": "Self-pay only — we do not accept insurance. Payment is due at the time of your appointment."
+    }
+  ],
+  "ctaHeading": "Still have a question?",
+  "ctaBody": "Call or text and we’ll be glad to help.",
+  "ctaLink": "Contact us"
+}

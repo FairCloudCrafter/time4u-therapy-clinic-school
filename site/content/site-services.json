@@ -1,0 +1,59 @@
+{
+  "eyebrow": "Our Services",
+  "headline": "Care that’s matched to your body and your goals.",
+  "intro": "Every session is personalized. Clara listens to your concerns first, then recommends the methods that are most effective for your body, comfort level, and lifestyle.",
+  "careHeading": "What we help with",
+  "careBody": "Whether you need relief from chronic tension, a calmer nervous system, better mobility, or a reset from a busy week, Clara matches the treatment to your body and your goals.",
+  "careBadges": ["Stress relief", "Pain management", "Mobility support"],
+  "popularHeading": "Most requested services",
+  "popularItems": [
+    "Deep tissue and therapeutic massage",
+    "Prenatal massage and pregnancy support",
+    "Reflexology and bodywork for stress and circulation",
+    "Waxing and self-care services in a clean, supportive setting"
+  ],
+  "serviceGroups": [
+    {
+      "title": "Massage Therapy",
+      "items": [
+        "Full Body Massage",
+        "Deep Tissue Massage",
+        "Pregnancy / Prenatal Massage",
+        "Lymphatic Massage",
+        "Breast Massage (certified)",
+        "Sinus Massage",
+        "Half Body Massage"
+      ]
+    },
+    {
+      "title": "Reflexology",
+      "items": ["Foot Reflexology", "Hand Reflexology", "Feet & Hand Reflexology"]
+    },
+    {
+      "title": "Waxing & Sugaring",
+      "items": [
+        "Eyebrow, lip & full face",
+        "Chin, jawline & neck",
+        "Arms, underarms & hands",
+        "Back & chest",
+        "Bikini & Brazilian",
+        "Toes & feet"
+      ]
+    },
+    {
+      "title": "Additional Services",
+      "items": [
+        "Ear Candling",
+        "Detox",
+        "Body Sculpting",
+        "Add-ons: hot stone, cupping & essential oils"
+      ]
+    }
+  ],
+  "pricingHeading": "Pricing & booking",
+  "pricingBody": "Pricing depends on the service, session length, and your goals, so Clara will recommend the best fit for you when you book. Call or text and we’ll help you choose the right visit.",
+  "pricingNote": "Self-pay only. We do not accept insurance. Appointments are typically scheduled 1–2 weeks in advance.",
+  "ctaHeading": "Not sure what you need?",
+  "ctaBody": "Tell Clara what’s bothering you and she’ll recommend the best approach for your body.",
+  "ctaLink": "Get in touch"
+}
