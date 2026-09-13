@@ -48,9 +48,12 @@ export default function ServicesPage() {
             {services.serviceGroups.map((group) => (
               <article className="service-card" key={group.title}>
                 <h3>{group.title}</h3>
-                <ul className="service-list">
+                <ul className="service-list price-list">
                   {group.items.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li key={`${group.title}-${item.name}`}>
+                      <span>{item.name}</span>
+                      <strong>{item.price}</strong>
+                    </li>
                   ))}
                 </ul>
               </article>

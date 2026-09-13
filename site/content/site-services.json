@@ -16,38 +16,39 @@
     {
       "title": "Massage Therapy",
       "items": [
-        "$45.00 half hour massage",
-        "$75.00 hour massage",
-        "$135.00 hour deep tissue",
-        "$115.00 1 1/2 hour massage",
-        "$200.00 1 1/2 hour massage deep tissue",
-        "$150.00 2 hour massage",
-        "$85.00 Lymphatic massage",
-        "$80.00 Pregnancy massage",
-        "$60.00 Sinus massage"
+        { "name": "Half hour massage", "price": "$45.00" },
+        { "name": "Hour massage", "price": "$75.00" },
+        { "name": "Hour deep tissue", "price": "$135.00" },
+        { "name": "1 1/2 hour massage", "price": "$115.00" },
+        { "name": "1 1/2 hour deep tissue massage", "price": "$200.00" },
+        { "name": "2 hour massage", "price": "$150.00" },
+        { "name": "Lymphatic massage", "price": "$85.00" },
+        { "name": "Pregnancy massage", "price": "$80.00" },
+        { "name": "Sinus massage", "price": "$60.00" }
       ]
     },
     {
       "title": "Add Ons",
       "items": [
-        "$20.00 cupping",
-        "$15.00 hot stone",
-        "$20.00 Essential Oils massage"
+        { "name": "Cupping", "price": "$20.00" },
+        { "name": "Hot stone", "price": "$15.00" },
+        { "name": "Essential oils massage", "price": "$20.00" }
       ]
     },
     {
       "title": "Other Services",
       "items": [
-        "$100.00 per hour Body Sculpting machine",
-        "$55.00 Detox",
-        "$70.00 Ear Candling/$5.00 for each extra candle",
-        "$75.00 First time Brazilian sugaring",
-        "$55.00 Maintenance Brazilian sugaring",
-        "$15.00 Under arms sugaring",
-        "$30.00 Bikini area sugaring",
-        "$40.00 Face sugaring",
-        "$15.00 Lip sugaring",
-        "$15.00 Chin sugaring"
+        { "name": "Body Sculpting machine", "price": "$100.00/hr" },
+        { "name": "Detox", "price": "$55.00" },
+        { "name": "Ear Candling", "price": "$70.00" },
+        { "name": "Extra candle", "price": "$5.00 each" },
+        { "name": "First time Brazilian sugaring", "price": "$75.00" },
+        { "name": "Maintenance Brazilian sugaring", "price": "$55.00" },
+        { "name": "Under arms sugaring", "price": "$15.00" },
+        { "name": "Bikini area sugaring", "price": "$30.00" },
+        { "name": "Face sugaring", "price": "$40.00" },
+        { "name": "Lip sugaring", "price": "$15.00" },
+        { "name": "Chin sugaring", "price": "$15.00" }
       ]
     }
   ],

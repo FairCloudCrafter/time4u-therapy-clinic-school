@@ -7,7 +7,7 @@ import SiteFooter from "./components/SiteFooter";
 const serif = Cormorant_Garamond({
   variable: "--font-serif",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const sans = Manrope({

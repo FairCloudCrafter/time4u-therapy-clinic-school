@@ -44,6 +44,8 @@ body {
     linear-gradient(180deg, #f9fbff 0%, var(--bg) 100%);
   line-height: 1.65;
   font-family: "Manrope", "Segoe UI", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 img {
@@ -266,18 +268,19 @@ p {
 h1 {
   margin: 0.8rem 0 0;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(2.2rem, 6vw, 4.1rem);
-  line-height: 0.96;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.1rem, 4.6vw, 3.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  font-weight: 600;
 }
 
 .hero-title {
   margin: 1rem 0 0;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(3.7rem, 6vw, 7.2rem);
-  line-height: 0.82;
-  letter-spacing: -0.06em;
-  font-weight: 600;
+  font-size: clamp(2.8rem, 4.8vw, 5.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  font-weight: 500;
   max-width: 760px;
   color: var(--ink);
 }
@@ -453,8 +456,10 @@ h1 {
 .cta-band h2 {
   margin: 0;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(1.9rem, 4vw, 3rem);
-  line-height: 1.02;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-weight: 600;
 }
 
 .section-head p {
@@ -687,22 +692,37 @@ h1 {
   margin-top: 0.9rem;
 }
 
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.35rem 1.3rem 1.15rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(244,247,251,0.88));
+}
+
 .service-card h3 {
+  margin: 0;
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.45rem;
-  padding-bottom: 0.55rem;
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  padding-bottom: 0.6rem;
   border-bottom: 2px solid var(--mist);
 }
 
 .service-list {
   list-style: none;
-  margin: 0.6rem 0 0;
+  margin: 0;
   padding: 0;
 }
 
 .service-list li {
   position: relative;
-  padding: 0.55rem 0 0.55rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.82rem 0;
   border-bottom: 1px solid var(--line);
   color: var(--ink);
 }
@@ -715,11 +735,32 @@ h1 {
   content: "";
   position: absolute;
   left: 0.1rem;
-  top: 0.95rem;
+  top: 50%;
   width: 7px;
   height: 7px;
   border-radius: 999px;
   background: var(--gold);
+  transform: translateY(-50%);
+}
+
+.service-list li span {
+  flex: 1;
+  padding-left: 1.25rem;
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.4;
+}
+
+.service-list li strong {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--navy-deep);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.price-list {
+  margin-top: 0.2rem;
 }
 
 .faq-list {
