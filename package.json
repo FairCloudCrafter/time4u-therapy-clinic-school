@@ -1,0 +1,10 @@
+{
+  "name": "time4u-therapy-clinic-school",
+  "private": true,
+  "scripts": {
+    "install-site": "npm install --prefix site",
+    "build": "npm install --prefix site && npm --prefix site run build",
+    "dev": "npm --prefix site run dev",
+    "start": "npm --prefix site run start"
+  }
+}

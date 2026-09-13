@@ -7,51 +7,52 @@
   "careBadges": ["Stress relief", "Pain management", "Mobility support"],
   "popularHeading": "Most requested services",
   "popularItems": [
-    "Deep tissue and therapeutic massage",
-    "Prenatal massage and pregnancy support",
-    "Reflexology and bodywork for stress and circulation",
-    "Waxing and self-care services in a clean, supportive setting"
+    "Massage therapy with a personalized treatment plan",
+    "Pregnancy and prenatal massage support",
+    "Deep tissue relief for pain and tension",
+    "Waxing, sugaring, and add-on therapies"
   ],
   "serviceGroups": [
     {
       "title": "Massage Therapy",
       "items": [
-        "Full Body Massage",
-        "Deep Tissue Massage",
-        "Pregnancy / Prenatal Massage",
-        "Lymphatic Massage",
-        "Breast Massage (certified)",
-        "Sinus Massage",
-        "Half Body Massage"
+        "$45.00 half hour massage",
+        "$75.00 hour massage",
+        "$135.00 hour deep tissue",
+        "$115.00 1 1/2 hour massage",
+        "$200.00 1 1/2 hour massage deep tissue",
+        "$150.00 2 hour massage",
+        "$85.00 Lymphatic massage",
+        "$80.00 Pregnancy massage",
+        "$60.00 Sinus massage"
       ]
     },
     {
-      "title": "Reflexology",
-      "items": ["Foot Reflexology", "Hand Reflexology", "Feet & Hand Reflexology"]
-    },
-    {
-      "title": "Waxing & Sugaring",
+      "title": "Add Ons",
       "items": [
-        "Eyebrow, lip & full face",
-        "Chin, jawline & neck",
-        "Arms, underarms & hands",
-        "Back & chest",
-        "Bikini & Brazilian",
-        "Toes & feet"
+        "$20.00 cupping",
+        "$15.00 hot stone",
+        "$20.00 Essential Oils massage"
       ]
     },
     {
-      "title": "Additional Services",
+      "title": "Other Services",
       "items": [
-        "Ear Candling",
-        "Detox",
-        "Body Sculpting",
-        "Add-ons: hot stone, cupping & essential oils"
+        "$100.00 per hour Body Sculpting machine",
+        "$55.00 Detox",
+        "$70.00 Ear Candling/$5.00 for each extra candle",
+        "$75.00 First time Brazilian sugaring",
+        "$55.00 Maintenance Brazilian sugaring",
+        "$15.00 Under arms sugaring",
+        "$30.00 Bikini area sugaring",
+        "$40.00 Face sugaring",
+        "$15.00 Lip sugaring",
+        "$15.00 Chin sugaring"
       ]
     }
   ],
   "pricingHeading": "Pricing & booking",
-  "pricingBody": "Pricing depends on the service, session length, and your goals, so Clara will recommend the best fit for you when you book. Call or text and we’ll help you choose the right visit.",
+  "pricingBody": "This pricing menu reflects the current service list and add-ons offered in the clinic. Clara will help you choose the best option for your body, goals, and comfort level when you book.",
   "pricingNote": "Self-pay only. We do not accept insurance. Appointments are typically scheduled 1–2 weeks in advance.",
   "ctaHeading": "Not sure what you need?",
   "ctaBody": "Tell Clara what’s bothering you and she’ll recommend the best approach for your body.",
