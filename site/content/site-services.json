@@ -3,14 +3,15 @@
   "headline": "Care that’s matched to your body and your goals.",
   "intro": "Every session is personalized. Clara listens to your concerns first, then recommends the methods that are most effective for your body, comfort level, and lifestyle.",
   "careHeading": "What we help with",
-  "careBody": "Whether you need relief from chronic tension, a calmer nervous system, better mobility, or a reset from a busy week, Clara matches the treatment to your body and your goals.",
+  "careBody": "Whether you need relief from chronic tension, support for a specific condition, better mobility, or a reset from a busy week, Clara matches each session to your body, comfort level, and goals.",
   "careBadges": ["Stress relief", "Pain management", "Mobility support"],
   "popularHeading": "Most requested services",
   "popularItems": [
     "Massage therapy with a personalized treatment plan",
     "Pregnancy and prenatal massage support",
     "Deep tissue relief for pain and tension",
-    "Waxing, sugaring, and add-on therapies"
+    "Reflexology, cupping, hot stone, and aromatherapy add-ons",
+    "Waxing, sugaring, and other body care services"
   ],
   "serviceGroups": [
     {
