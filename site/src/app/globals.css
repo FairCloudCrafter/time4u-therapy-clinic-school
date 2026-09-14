@@ -1093,6 +1093,58 @@ h1 {
   text-decoration: underline;
 }
 
+/* ── Newsletter signup ──────────────────────────────────── */
+.newsletter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.newsletter input[type="email"] {
+  flex: 1 1 12rem;
+  min-width: 0;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid rgba(19, 60, 106, 0.2);
+  border-radius: 999px;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+}
+
+.newsletter input[type="email"]:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 1px;
+}
+
+.newsletter .btn {
+  flex: 0 0 auto;
+}
+
+.newsletter-hp {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+}
+
+.newsletter-status {
+  flex-basis: 100%;
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.newsletter-status--ok {
+  color: #1f7a4d;
+}
+
+.newsletter-status--err {
+  color: #b3261e;
+}
+
+
 /* ── Benefits page ──────────────────────────────────────── */
 .service-jump-nav {
   display: flex;

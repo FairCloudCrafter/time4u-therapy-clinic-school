@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { business, fullAddress, phoneDigits } from "../lib/business";
+import NewsletterForm from "./NewsletterForm";
 
 const footerLinks = [
   { href: "/services", label: "Services" },
@@ -51,13 +52,13 @@ export default function SiteFooter() {
           <div className="card" style={{ padding: "1rem" }}>
             <h3>Stay in touch</h3>
             <p className="tiny" style={{ marginTop: "0.5rem" }}>
-              Questions about massage or our upcoming School of Massage Therapy? Give us a call
-              or send a text—we&apos;re happy to help.
+              Join our newsletter for wellness tips and news about our upcoming School of
+              Massage Therapy.
             </p>
-            <p style={{ marginTop: "0.85rem" }}>
-              <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
-                Call or text {business.phone}
-              </a>
+            <NewsletterForm />
+            <p className="tiny" style={{ marginTop: "0.75rem" }}>
+              Prefer to talk?{" "}
+              <a href={`tel:${phoneDigits}`}>Call or text {business.phone}</a>.
             </p>
           </div>
         </div>
