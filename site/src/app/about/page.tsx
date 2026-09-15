@@ -3,6 +3,7 @@ import Link from "next/link";
 import aboutContent from "../../../content/site-about.json";
 import { basePath } from "../lib/basePath";
 import { business, phoneDigits } from "../lib/business";
+import NewsletterForm from "../components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "About Clara",
@@ -61,6 +62,23 @@ export default function AboutPage() {
                 {item}
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad">
+        <div className="wrap" style={{ display: "flex", justifyContent: "center" }}>
+          <div className="card" style={{ maxWidth: "480px", width: "100%", padding: "1.5rem" }}>
+            <h2 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>Stay in touch</h2>
+            <p className="tiny" style={{ marginBottom: "1rem" }}>
+              Get occasional wellness tips and be the first to hear clinic news and updates
+              about the upcoming School of Massage Therapy.
+            </p>
+            <NewsletterForm />
+            <p className="tiny" style={{ marginTop: "0.75rem" }}>
+              Prefer to talk?{" "}
+              <a href={`tel:${phoneDigits}`}>Call or text {business.phone}</a>.
+            </p>
           </div>
         </div>
       </section>

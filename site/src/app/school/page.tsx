@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import schoolContent from "../../../content/site-school.json";
 import { business, phoneDigits } from "../lib/business";
+import NewsletterForm from "../components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "School of Massage Therapy",
@@ -35,10 +36,9 @@ export default function SchoolPage() {
           <article className="card">
             <h3>{school.interestHeading}</h3>
             <p>{school.interestBody}</p>
-            <p style={{ marginTop: "1rem" }}>
-              <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
-                {school.ctaPrimary}
-              </a>
+            <NewsletterForm />
+            <p className="tiny" style={{ marginTop: "0.75rem" }}>
+              Or call / text: <a href={`tel:${phoneDigits}`}>{business.phone}</a>
             </p>
           </article>
         </div>
