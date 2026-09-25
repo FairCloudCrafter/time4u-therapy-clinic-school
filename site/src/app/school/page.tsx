@@ -44,26 +44,28 @@ export default function SchoolPage() {
         </div>
       </section>
 
-      <section className="section-pad">
-        <div className="wrap">
-          <article className="card">
-            <h3>{school.studentHeading}</h3>
-            <p>{school.studentIntro}</p>
-            <ul className="steps">
-              {business.studentPricing.map((item) => (
-                <li key={item.service}>
-                  <strong>{item.price}</strong> — {item.service}
-                </li>
-              ))}
-            </ul>
-            <p style={{ marginTop: "1rem" }}>
-              <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
-                {school.ctaSecondary}
-              </a>
-            </p>
-          </article>
-        </div>
-      </section>
+      {business.studentPricing.length > 0 && (
+        <section className="section-pad">
+          <div className="wrap">
+            <article className="card">
+              <h3>{school.studentHeading}</h3>
+              <p>{school.studentIntro}</p>
+              <ul className="steps">
+                {business.studentPricing.map((item) => (
+                  <li key={item.service}>
+                    <strong>{item.price}</strong> — {item.service}
+                  </li>
+                ))}
+              </ul>
+              <p style={{ marginTop: "1rem" }}>
+                <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
+                  {school.ctaSecondary}
+                </a>
+              </p>
+            </article>
+          </div>
+        </section>
+      )}
     </main>
   );
 }

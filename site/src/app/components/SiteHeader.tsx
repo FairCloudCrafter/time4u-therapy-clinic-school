@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/credentials", label: "Credentials" },
   { href: "/faq", label: "FAQ" },
   { href: "/school", label: "School" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function SiteHeader() {
@@ -95,9 +96,6 @@ export default function SiteHeader() {
                       {link.label}
                     </Link>
                   ))}
-                  <Link href="/contact" onClick={() => setMenuOpen(false)}>
-                    Contact
-                  </Link>
                 </div>
               )}
             </div>

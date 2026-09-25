@@ -69,13 +69,41 @@ export default function ContactPage() {
               {business.hoursByDay.map((row) => (
                 <div key={row.day} className={`hours-row${row.hours ? "" : " closed"}`}>
                   <span>{row.day}</span>
-                  <span>{row.hours ?? "Not available"}</span>
+                  <span>{row.hours || "Not available"}</span>
                 </div>
               ))}
             </div>
             <p className="tiny" style={{ marginTop: "0.9rem" }}>
               {business.bookingNote}. Please schedule 1–2 weeks in advance.
             </p>
+          </article>
+        </div>
+      </section>
+
+      {/* Map */}
+      <section className="section-pad">
+        <div className="wrap">
+          <article className="note-card">
+            <h3>Find us</h3>
+            <p>{fullAddress}</p>
+            <div className="map-embed">
+              <iframe
+                title={`Map to ${business.name}`}
+                src={`https://www.google.com/maps?q=${encodeURIComponent(fullAddress)}&output=embed`}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div className="hero-cta">
+              <a
+                className="btn btn-primary"
+                href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(fullAddress)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get directions
+              </a>
+            </div>
           </article>
         </div>
       </section>

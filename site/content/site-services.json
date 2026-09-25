@@ -16,7 +16,7 @@
   "serviceGroups": [
     {
       "title": "Massage Therapy",
-      "benefitSummary": "Reduces stress, relieves pain, improves mobility, and supports immunity. Clinically effective for low-back pain, anxiety, prenatal care, and recovery.",
+      "benefitSummary": "Helps ease stress, relieve muscle tension, and improve mobility. A popular choice for low-back discomfort, prenatal comfort, and recovery.",
       "benefitAnchor": "massage",
       "items": [
         { "name": "Half hour massage", "price": "$45.00" },

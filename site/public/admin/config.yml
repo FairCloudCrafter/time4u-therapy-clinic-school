@@ -31,8 +31,20 @@ collections:
           - { name: hours, label: "Hours", widget: string, hint: "e.g. Mon–Thu, 9am–5pm" }
           - { name: bookingNote, label: "Booking note", widget: string, hint: "e.g. By appointment only" }
           - { name: movingNotice, label: "Notice banner", widget: string, required: false, hint: "Short announcement, e.g. a move date. Leave blank to hide." }
+          - name: hoursByDay
+            label: "Hours by day (Contact page table)"
+            label_singular: "Day"
+            widget: list
+            allow_add: false
+            fields:
+              - { name: day, label: "Day", widget: string }
+              - { name: hours, label: "Hours", widget: string, required: false, hint: "e.g. 9:00 am – 5:00 pm. Leave blank if closed." }
           - { name: licenseNumber, label: "License number", widget: string }
+          - { name: abmpMember, label: "ABMP member (show in footer)", widget: boolean, required: false }
           - { name: reviewsRating, label: "Google rating text", widget: string, hint: "e.g. 4.8 out of 5" }
+          - { name: giftCertNote, label: "Gift certificate text (Contact page)", widget: text }
+          - { name: facebook, label: "Facebook page link", widget: string, required: false, hint: "Full link starting with https://. Leave blank to hide." }
+          - { name: instagram, label: "Instagram link", widget: string, required: false, hint: "Full link starting with https://. Leave blank to hide." }
           - name: studentPricing
             label: "Student massage pricing"
             label_singular: "Price"
@@ -120,6 +132,10 @@ collections:
           - { name: trustedBody, label: "Trusted body", widget: text }
           - { name: trustedBadges, label: "Trusted badges", widget: list, field: { name: item, label: "Badge", widget: string } }
           - { name: credentialsLink, label: "Credentials link label", widget: string }
+          - { name: giftHeading, label: "Gift certificate heading", widget: string }
+          - { name: giftBody, label: "Gift certificate text", widget: text }
+          - { name: giftNote, label: "Gift certificate small print", widget: string }
+          - { name: giftCta, label: "Gift certificate button label", widget: string }
 
   - name: servicesPage
     label: "Services Page"
@@ -137,11 +153,22 @@ collections:
           - { name: popularHeading, label: "Popular services heading", widget: string }
           - { name: popularItems, label: "Popular services", widget: list, field: { name: item, label: "Service", widget: string } }
           - name: serviceGroups
-            label: "Service groups"
+            label: "Service groups & prices"
+            label_singular: "Service group"
             widget: list
             fields:
               - { name: title, label: "Group title", widget: string }
-              - { name: items, label: "Items", widget: list, field: { name: item, label: "Service", widget: string } }
+              - { name: description, label: "Group description", widget: text, required: false }
+              - name: items
+                label: "Services & prices"
+                label_singular: "Service"
+                widget: list
+                summary: "{{fields.name}} — {{fields.price}}"
+                fields:
+                  - { name: name, label: "Service", widget: string, hint: "e.g. Hour massage" }
+                  - { name: price, label: "Price", widget: string, hint: "e.g. $75.00" }
+              - { name: benefitSummary, label: "Benefits summary", widget: text, required: false }
+              - { name: benefitAnchor, label: "Benefits page section id", widget: string, required: false, hint: "Links to that section on the Benefits page, e.g. massage or detox. Leave blank for no link." }
           - { name: pricingHeading, label: "Pricing heading", widget: string }
           - { name: pricingBody, label: "Pricing body", widget: text }
           - { name: pricingNote, label: "Pricing note", widget: text }
@@ -233,3 +260,60 @@ collections:
           - { name: studentIntro, label: "Student intro", widget: text }
           - { name: ctaPrimary, label: "Primary CTA label", widget: string }
           - { name: ctaSecondary, label: "Secondary CTA label", widget: string }
+
+  - name: benefitsPage
+    label: "Benefits Page"
+    files:
+      - name: benefits
+        label: "Benefits page content"
+        file: "site/content/site-benefits.json"
+        fields:
+          - { name: eyebrow, label: "Small text above headline", widget: string }
+          - { name: headline, label: "Headline", widget: string }
+          - { name: intro, label: "Intro", widget: text }
+          - name: firstVisit
+            label: "Your first visit"
+            widget: object
+            fields:
+              - { name: heading, label: "Heading", widget: string }
+              - { name: body, label: "Text", widget: text }
+              - { name: items, label: "Checklist", widget: list, field: { name: item, label: "Item", widget: string } }
+          - name: services
+            label: "Services"
+            label_singular: "Service"
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: id, label: "Section id", widget: string, hint: "Lower case, no spaces (e.g. massage). The Services page links here." }
+              - { name: name, label: "Service name", widget: string }
+              - { name: tagline, label: "Tagline", widget: string }
+              - { name: description, label: "Description", widget: text }
+              - { name: benefits, label: "Benefits", widget: list, field: { name: item, label: "Benefit", widget: string } }
+              - { name: prepTip, label: "Preparation tip", widget: text, required: false }
+              - { name: disclaimer, label: "Disclaimer", widget: text, required: false }
+          - { name: ctaHeading, label: "Bottom heading", widget: string }
+          - { name: ctaBody, label: "Bottom text", widget: text }
+          - { name: ctaLink, label: "Bottom button label", widget: string }
+
+  - name: credentialsPage
+    label: "Credentials Page"
+    files:
+      - name: credentials
+        label: "Credentials page content"
+        file: "site/content/site-credentials.json"
+        fields:
+          - { name: eyebrow, label: "Small text above headline", widget: string }
+          - { name: headline, label: "Headline", widget: string }
+          - { name: intro, label: "Intro", widget: text }
+          - name: items
+            label: "Credential cards"
+            label_singular: "Credential"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Title", widget: string }
+              - { name: body, label: "Text", widget: text, hint: "Type {license} to insert the license number from Business Info." }
+          - { name: note, label: "Small print", widget: text }
+          - { name: ctaHeading, label: "Bottom heading", widget: string }
+          - { name: ctaBody, label: "Bottom text", widget: string }
+          - { name: ctaLink, label: "Bottom button label", widget: string }

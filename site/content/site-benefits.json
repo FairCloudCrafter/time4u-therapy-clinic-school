@@ -19,46 +19,45 @@
       "id": "massage",
       "name": "Massage Therapy",
       "tagline": "The most effective tool for managing stress, pain, and tension.",
-      "description": "Experts estimate that upwards of ninety percent of disease is stress-related. And perhaps nothing ages us faster, internally and externally, than high stress. Therapeutic massage is one of the most clinically supported ways to address that. Regular sessions reduce anxiety, improve sleep quality, and help your body recover from the wear of daily life.",
+      "description": "Stress takes a real toll on how we feel, sleep, and move. Therapeutic massage is one of the most researched ways to ease it. Many clients find regular sessions help them relax, sleep better, and recover from the wear of daily life.",
       "benefits": [
-        "Alleviates low-back pain and improves range of motion",
-        "Enhances immunity by stimulating lymph flow — the body's natural defense system",
-        "Reduces anxiety, depression, and chronic stress",
-        "Improves circulation and pumps oxygen into tissues and vital organs",
-        "Releases endorphins — your body's natural painkiller",
+        "May ease low-back pain and improve range of motion",
+        "Encourages circulation and lymph flow",
+        "Helps reduce feelings of anxiety and everyday stress",
+        "Promotes deep relaxation and better sleep",
+        "Can release tension and ease sore muscles",
         "Supports pregnancy comfort and postpartum recovery",
         "Helps athletes prepare for and recover from strenuous workouts",
-        "Reduces scar tissue and promotes tissue regeneration"
+        "Can help soften tight tissue around old injuries"
       ],
       "disclaimer": "Massage therapy does not diagnose illness, prescribe medications, or perform spinal manipulation. Please inform Clara of all known physical or medical conditions. Massage should not replace expert care by a qualified medical practitioner."
     },
     {
       "id": "reflexology",
       "name": "Reflexology",
-      "tagline": "Ancient healing through precise pressure on the feet and hands.",
-      "description": "Reflexology maps specific zones on your feet and hands to organs and systems throughout the body. Applying targeted pressure to these points stimulates your nervous system, promotes circulation, and supports your body's natural healing response. Sessions typically last 30–60 minutes and require no undressing — making this an ideal starting point for new clients.",
+      "tagline": "Relaxing, focused pressure on the feet and hands.",
+      "description": "Reflexology applies targeted pressure to specific points on your feet and hands. Many clients find it deeply calming and a helpful way to unwind tension. Sessions typically last 30–60 minutes and require no undressing — making this an ideal starting point for new clients.",
       "benefits": [
         "Deeply relaxing — no undressing required for most sessions",
-        "Helps restore balance and energy after injury or fatigue",
-        "Boosts sluggish circulation",
-        "Useful for stress, migraines, IBS, back pain, and poor digestion",
-        "Helps relieve menopausal symptoms, PMS, and period pain",
-        "Reduces pressure on legs and feet during pregnancy",
-        "Calms the endocrine and reproductive system"
+        "A gentle way to unwind after injury, fatigue, or a long week",
+        "Encourages circulation in the feet and legs",
+        "Many clients use it alongside care for stress and tension headaches",
+        "A soothing option for tired, swollen feet during pregnancy",
+        "Pairs well with massage for a full-body reset"
       ],
       "disclaimer": "Reflexology cannot promise to cure any disease or illness. It is not suitable for people with verruca, athlete's foot, osteoporosis, or recently broken bones in the ankle, foot, or hand. Reflexology should not replace expert care by a qualified medical practitioner."
     },
     {
       "id": "aromatherapy",
       "name": "Aromatherapy",
-      "tagline": "Therapeutic scent that works alongside your body's own healing.",
-      "description": "Aromatherapy uses pure essential oils derived from aromatic plants to support physical and emotional well-being. Clara selects oils based on your specific needs at each session — calming, energizing, anti-inflammatory, or mood-lifting. Aromatherapy can be added to your massage or reflexology session, or experienced on its own.",
+      "tagline": "Therapeutic scent to help you relax.",
+      "description": "Aromatherapy uses pure essential oils derived from aromatic plants to support relaxation and a sense of well-being. Clara selects oils based on how you want to feel at each session — calming, energizing, or mood-lifting. Aromatherapy can be added to your massage or reflexology session, or experienced on its own.",
       "benefits": [
-        "Reduces stress and anxiety with targeted calming scents",
-        "Uplifts mood and eases mild depression",
-        "Improves sleep quality and depth",
-        "Energizes and improves mental focus",
-        "Essential oils offer healing benefits beyond their scent",
+        "Calming scents that help you unwind",
+        "Can lift your mood and help you feel refreshed",
+        "Helps set a restful tone for better sleep",
+        "Energizing blends for focus and clarity",
+        "Oils chosen for how you want to feel that day",
         "Pairs beautifully with massage and reflexology sessions"
       ],
       "disclaimer": "Aromatherapy does not constitute the practice of medicine and does not replace the advice of your physician. Please inform Clara of any known allergies or sensitivities to plants, oils, or fragrances before your session."
@@ -82,15 +81,15 @@
     {
       "id": "detox",
       "name": "Ionic Detox Foot Bath",
-      "tagline": "A gentle full-body detox through the soles of your feet.",
-      "description": "The ionic foot bath uses a gentle electric current to stimulate ion exchange through the pores in your feet, encouraging the body to release toxins absorbed from food, environment, and daily exposure. It's a relaxing, non-invasive session that clients often choose as a complement to massage or on its own as a wellness reset.",
+      "tagline": "A warm, relaxing foot soak.",
+      "description": "The ionic foot bath is a warm, relaxing soak that many clients enjoy as a complement to massage or on its own as a wellness break. It's gentle and non-invasive — you simply sit back and relax.",
       "benefits": [
-        "Helps neutralize toxins accumulated from food and environmental exposure",
+        "A calm, restful break in your day",
         "Promotes relaxation and an overall sense of well-being",
-        "Immediate visible results during the session",
         "Gentle and non-invasive — you simply relax and soak your feet",
         "Pairs well with massage sessions as a complete wellness experience"
-      ]
+      ],
+      "disclaimer": "The ionic foot bath is offered as a relaxation service. It is not a medical treatment and does not replace care from a qualified medical practitioner."
     }
   ],
 

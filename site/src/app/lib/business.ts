@@ -9,3 +9,5 @@ export const phoneDigits = business.phone.replace(/\D/g, "");
 
 // "611 West Chickasha, Suite B, Chickasha, OK 73018"
 export const fullAddress = `${business.addressLine}, ${business.city}, ${business.state} ${business.zip}`;
+
+export const siteUrl = "https://time4utherapymassageclinicandschool.com";
