@@ -5,45 +5,20 @@
   "ctaPrimary": "Book Your Visit",
   "ctaSecondary": "Text for Availability",
   "ctaTertiary": "Explore Services",
+  "heroImage": "/images/hero-massage.jpg",
+  "heroImageAlt": "Relaxing massage in a calm treatment room",
   "trustBadges": [
-    { "value": "4.8 out of 5", "label": "Google rating" },
-    { "value": "Licensed", "label": "Oklahoma therapist" },
-    { "value": "1–2 wks", "label": "Typical booking window" }
-  ],
-  "proofCards": [
     {
-      "eyebrow": "Care that fits",
-      "title": "Massage for stress, pain, and recovery.",
-      "body": "Every session is tailored to what your body needs most—whether that is deep relief, gentle relaxation, or better mobility."
+      "value": "4.8 out of 5",
+      "label": "Google rating"
     },
     {
-      "eyebrow": "Experienced",
-      "title": "Licensed and focused on comfort.",
-      "body": "Clara helps you feel informed and comfortable from intake through the treatment itself, with clear guidance every step of the way."
+      "value": "Licensed",
+      "label": "Oklahoma therapist"
     },
     {
-      "eyebrow": "Calm setting",
-      "title": "Restorative care in a professional space.",
-      "body": "The atmosphere is quiet, soothing, and supportive so you can settle in and truly relax."
-    }
-  ],
-  "processHeading": "Personalized care designed to help you feel better.",
-  "processIntro": "Relief, recovery, and calm should feel easy to access. That is why every visit is shaped around comfort, trust, and real results instead of a one-size-fits-all approach.",
-  "processSteps": [
-    {
-      "number": "1",
-      "title": "Start with listening.",
-      "body": "Your concerns, comfort level, and goals guide the treatment plan from the very beginning."
-    },
-    {
-      "number": "2",
-      "title": "Receive targeted treatment.",
-      "body": "Each session uses the right balance of therapeutic pressure, technique, and attention."
-    },
-    {
-      "number": "3",
-      "title": "Leave feeling lighter.",
-      "body": "Supportive care helps you feel calmer, more mobile, and better equipped to take on the week."
+      "value": "1–2 wks",
+      "label": "Typical booking window"
     }
   ],
   "servicesHeading": "Massage and wellness care that fits your needs.",
@@ -68,35 +43,38 @@
       "body": "Professional waxing and body care in a clean, comfortable environment that supports your routine."
     }
   ],
-  "whyChooseHeading": "What makes the experience different",
-  "whyChooseBody": "You get a licensed therapist who listens first and adjusts care to your body, comfort level, and goals instead of using a one-size-fits-all approach.",
-  "whyChooseBadges": ["Licensed Therapist", "Personalized Care", "Professional & Discreet", "Local & Trusted"],
-  "expectationsHeading": "What to expect",
-  "expectations": [
-    "A warm, quiet treatment room that helps you settle in.",
-    "Respectful draping, comfort, and clear communication.",
-    "Techniques chosen based on your symptoms and goals.",
-    "Honest guidance about what will actually help you feel better."
+  "processHeading": "Personalized care designed to help you feel better.",
+  "processIntro": "Relief, recovery, and calm should feel easy to access. That is why every visit is shaped around comfort, trust, and real results instead of a one-size-fits-all approach.",
+  "processSteps": [
+    {
+      "number": "1",
+      "title": "Start with listening.",
+      "body": "Your concerns, comfort level, and goals guide the treatment plan from the very beginning."
+    },
+    {
+      "number": "2",
+      "title": "Receive targeted treatment.",
+      "body": "Each session uses the right balance of therapeutic pressure, technique, and attention."
+    },
+    {
+      "number": "3",
+      "title": "Leave feeling lighter.",
+      "body": "Supportive care helps you feel calmer, more mobile, and better equipped to take on the week."
+    }
   ],
-  "spotlight": {
-    "image": "/images/spa-calm.jpg",
-    "alt": "Relaxing spa atmosphere",
-    "title": "A calm space to truly unwind.",
-    "body": "From the moment you walk in, everything is designed to help you relax, feel safe, and leave lighter than when you arrived."
-  },
   "reviewsHeading": "What clients are saying",
-  "ctaBandHeading": "Ready for relief that actually lasts?",
-  "ctaBandBody": "Book a massage session or learn more about the School of Massage Therapy and the growing local training opportunity in Chickasha.",
-  "ctaBandPrimary": "Call Now",
-  "ctaBandSecondary": "School Info",
+  "giftHeading": "Give the Gift of Wellness",
+  "giftBody": "Gift certificates are available for every service. Whether it’s a birthday, a holiday, or simply showing someone you care — a massage from Time 4U is a gift that genuinely helps.",
+  "giftNote": "Call or text to purchase a gift certificate in any amount.",
+  "giftCta": "Purchase a Gift Certificate",
   "contactHeading": "Ready to book?",
   "contactBody": "Call or text — appointments are scheduled 1–2 weeks ahead.",
   "trustedHeading": "Trusted, licensed care",
   "trustedBody": "Clara Schoonover, L.M.T. serves Chickasha with professional therapeutic massage and bodywork focused on lasting relief and real comfort.",
-  "trustedBadges": ["License #84488", "ABMP Member", "By Appointment"],
-  "credentialsLink": "See credentials",
-  "giftHeading": "Give the Gift of Wellness",
-  "giftBody": "Gift certificates are available for every service. Whether it\u2019s a birthday, a holiday, or simply showing someone you care — a massage from Time 4U is a gift that genuinely helps.",
-  "giftNote": "Call or text to purchase a gift certificate in any amount.",
-  "giftCta": "Purchase a Gift Certificate"
+  "trustedBadges": [
+    "License #84488",
+    "ABMP Member",
+    "By Appointment"
+  ],
+  "credentialsLink": "See credentials"
 }

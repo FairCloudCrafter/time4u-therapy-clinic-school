@@ -418,34 +418,29 @@ h1 {
   justify-content: flex-end;
 }
 
-.hero-aside {
-  background: linear-gradient(180deg, rgba(17, 56, 92, 0.98), rgba(33, 100, 168, 0.92));
-  color: #eef5ff;
-  padding: 2.1rem 2rem 1.8rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.hero-media {
+  position: relative;
+  min-height: 260px;
 }
 
-.hero-aside h2 {
-  margin: 0;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(2.4rem, 4vw, 4rem);
-  line-height: 0.9;
-  letter-spacing: -0.04em;
-  color: #f3f8ff;
+.hero-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.hero-aside ul {
-  margin: 1rem 0 0;
-  padding-left: 1.1rem;
-  font-size: 1.08rem;
-  line-height: 1.7;
+.hero-link {
+  margin-top: 0.9rem;
+  width: fit-content;
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration: none;
 }
 
-.hero-aside li {
-  margin: 0.45rem 0;
-  color: #dfeeff;
+.hero-link:hover {
+  text-decoration: underline;
 }
 
 .section-pad {
@@ -528,8 +523,11 @@ h1 {
 .note-card h3,
 .info-card h3 {
   margin: 0;
-  font-size: 1.16rem;
-  line-height: 1.2;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 .card p,
@@ -874,7 +872,6 @@ h1 {
   }
 
   .hero-copy,
-  .hero-aside,
   .page-hero .wrap,
   .card,
   .feature-card,
@@ -917,6 +914,48 @@ h1 {
   color: var(--ink);
   font-weight: 700;
   text-align: center;
+}
+
+/* Must follow the base .hero-facts/.results-strip rules above to win. */
+@media (max-width: 759px) {
+  .hero-copy {
+    padding: 1.6rem 1.2rem 1.3rem;
+  }
+
+  .hero-facts {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .hero-facts span {
+    min-height: 0;
+    justify-content: flex-start;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+  }
+
+  .results-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .result-pill {
+    min-height: 0;
+    padding: 0.75rem 0.7rem;
+    border-radius: var(--radius-md);
+  }
+
+  .result-pill strong {
+    font-size: 1.1rem;
+  }
+
+  .result-pill span {
+    font-size: 0.75rem;
+  }
+
+  .hero-media {
+    min-height: 220px;
+  }
 }
 
 .feature-card {

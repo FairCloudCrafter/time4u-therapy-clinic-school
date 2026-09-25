@@ -21,10 +21,10 @@ export default function Home() {
               <a className="btn btn-outline" href={`sms:${phoneDigits}`}>
                 {home.ctaSecondary}
               </a>
-              <Link className="btn btn-outline" href="/services">
-                {home.ctaTertiary}
-              </Link>
             </div>
+            <Link className="hero-link" href="/services">
+              {home.ctaTertiary} →
+            </Link>
             <div className="results-strip" aria-label="Clinic results and trust indicators">
               {home.trustBadges.map((badge) => (
                 <div className="result-pill" key={badge.label}>
@@ -40,51 +40,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-aside">
-            <h2>Why clients choose Time 4U</h2>
-            <ul>
-              <li>Personalized care that listens to your body and your goals.</li>
-              <li>Therapeutic techniques designed for relief, recovery, and calm.</li>
-              <li>A quiet, supportive environment that helps you truly reset.</li>
-            </ul>
-            <div className="badge-row" style={{ marginTop: "1rem" }}>
-              <span className="badge">Deep Tissue</span>
-              <span className="badge">Prenatal</span>
-              <span className="badge">Reflexology</span>
-              <span className="badge">Waxing</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-pad">
-        <div className="wrap">
-          <div className="proof-grid">
-            {home.proofCards.map((card) => (
-              <article className="info-card" key={card.title}>
-                <span className="eyebrow">{card.eyebrow}</span>
-                <h3>{card.title}</h3>
-                <p>{card.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-pad">
-        <div className="wrap">
-          <div className="section-head">
-            <h2>{home.processHeading}</h2>
-            <p>{home.processIntro}</p>
-          </div>
-          <div className="proof-grid premium-value-grid">
-            {home.processSteps.map((step) => (
-              <article className="info-card value-card" key={step.number}>
-                <span className="eyebrow">{step.number}</span>
-                <h3>{step.title}</h3>
-                <p>{step.body}</p>
-              </article>
-            ))}
+          <div className="hero-media">
+            <img src={`${basePath}${home.heroImage}`} alt={home.heroImageAlt} />
           </div>
         </div>
       </section>
@@ -110,52 +67,27 @@ export default function Home() {
           </div>
           <p style={{ marginTop: "1rem" }}>
             <Link className="btn btn-primary" href="/services">
-              See all services
+              See all services &amp; prices
             </Link>
           </p>
         </div>
       </section>
 
       <section className="section-pad">
-        <div className="wrap grid-2">
-          <article className="card">
-            <h3>{home.whyChooseHeading}</h3>
-            <p>{home.whyChooseBody}</p>
-            <div className="badge-row">
-              {home.whyChooseBadges.map((badge) => (
-                <span className="badge" key={badge}>{badge}</span>
-              ))}
-            </div>
-          </article>
-          <article className="card">
-            <h3>{home.expectationsHeading}</h3>
-            <ul className="steps">
-              {home.expectations.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section className="section-pad">
         <div className="wrap">
-          <article className="card" style={{ display: "grid", gap: "1rem" }}>
-            <div className="feature-media" style={{ margin: "-1.1rem -1.1rem 0" }}>
-              <img src={`${basePath}${home.spotlight.image}`} alt={home.spotlight.alt} />
-            </div>
-            <div>
-              <h2 style={{ margin: 0, fontFamily: '"Cormorant Garamond", Georgia, serif', fontSize: "clamp(1.8rem, 4vw, 2.7rem)" }}>
-                {home.spotlight.title}
-              </h2>
-              <p>{home.spotlight.body}</p>
-              <p style={{ marginTop: "1rem" }}>
-                <Link className="btn btn-primary" href="/contact">
-                  Book your visit
-                </Link>
-              </p>
-            </div>
-          </article>
+          <div className="section-head">
+            <h2>{home.processHeading}</h2>
+            <p>{home.processIntro}</p>
+          </div>
+          <div className="proof-grid premium-value-grid">
+            {home.processSteps.map((step) => (
+              <article className="info-card value-card" key={step.number}>
+                <span className="eyebrow">{step.number}</span>
+                <h3>{step.title}</h3>
+                <p>{step.body}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -177,25 +109,6 @@ export default function Home() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="section-pad">
-        <div className="wrap">
-          <article className="cta-band">
-            <div>
-              <h2>{home.ctaBandHeading}</h2>
-              <p>{home.ctaBandBody}</p>
-            </div>
-            <div className="cta-actions">
-              <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
-                {home.ctaBandPrimary}
-              </a>
-              <Link className="btn btn-outline" href="/school">
-                {home.ctaBandSecondary}
-              </Link>
-            </div>
-          </article>
         </div>
       </section>
 

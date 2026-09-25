@@ -13,10 +13,10 @@ Initial repository scaffold for Time 4U Therapy Massage Clinic and School websit
 3. Build mockup only after approval.
 4. Start implementation and launch workflow.
 
-## GitHub Pages Source
-- Branch: `main`
-- Folder: `/docs`
-- Planning page: `docs/index.html`
+## Hosting
+- Live site: https://time4utherapymassageclinicandschool.com (Cloudflare Pages, auto-deploys on push to `main`; root dir `site`, build `npm run build`, output `out`).
+- Content editor: https://time4utherapymassageclinicandschool.com/admin/ (Decap CMS, config in `site/public/admin/config.yml`).
+- The old GitHub Pages preview (`docs/`) has been retired.
 
 ## Local Website App
 - Stack: Next.js + TypeScript + Tailwind CSS

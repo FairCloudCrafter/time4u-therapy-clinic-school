@@ -69,73 +69,58 @@ collections:
       - name: home
         label: "Home page content"
         file: "site/content/site-home.json"
+        description: "Fields are listed in the order they appear on the page, top to bottom."
         fields:
-          - { name: eyebrow, label: "Eyebrow", widget: string }
-          - { name: headline, label: "Headline", widget: string }
-          - { name: subheadline, label: "Subheadline", widget: text }
-          - { name: ctaPrimary, label: "Primary CTA text", widget: string }
-          - { name: ctaSecondary, label: "Secondary CTA text", widget: string }
-          - { name: ctaTertiary, label: "Tertiary CTA text", widget: string }
+          - { name: eyebrow, label: "TOP — Small label above headline", widget: string }
+          - { name: headline, label: "TOP — Big headline", widget: string }
+          - { name: subheadline, label: "TOP — Text under headline", widget: text }
+          - { name: ctaPrimary, label: "TOP — Call button text", widget: string }
+          - { name: ctaSecondary, label: "TOP — Text-message button text", widget: string }
+          - { name: ctaTertiary, label: "TOP — Services link text", widget: string }
+          - { name: heroImage, label: "TOP — Photo", widget: image, hint: "A wide (landscape) photo works best." }
+          - { name: heroImageAlt, label: "TOP — Photo description", widget: string, hint: "Describe the photo for screen readers, e.g. 'Clara giving a back massage'." }
           - name: trustBadges
-            label: "Trust badges"
+            label: "TOP — Highlight boxes"
+            label_singular: "Highlight"
             widget: list
+            summary: "{{fields.value}} — {{fields.label}}"
             fields:
-              - { name: value, label: "Value", widget: string }
-              - { name: label, label: "Label", widget: string }
-          - name: proofCards
-            label: "Proof cards"
-            widget: list
-            fields:
-              - { name: eyebrow, label: "Eyebrow", widget: string }
-              - { name: title, label: "Title", widget: string }
-              - { name: body, label: "Body", widget: text }
-          - { name: processHeading, label: "Process heading", widget: string }
-          - { name: processIntro, label: "Process intro", widget: text }
-          - name: processSteps
-            label: "Process steps"
-            widget: list
-            fields:
-              - { name: number, label: "Number", widget: string }
-              - { name: title, label: "Title", widget: string }
-              - { name: body, label: "Body", widget: text }
-          - { name: servicesHeading, label: "Services heading", widget: string }
-          - { name: servicesIntro, label: "Services intro", widget: text }
+              - { name: value, label: "Big text", widget: string, hint: "e.g. 4.8 out of 5" }
+              - { name: label, label: "Small text", widget: string, hint: "e.g. Google rating" }
+          - { name: servicesHeading, label: "SERVICES — Heading", widget: string }
+          - { name: servicesIntro, label: "SERVICES — Intro text", widget: text }
           - name: serviceCards
-            label: "Service cards"
+            label: "SERVICES — Service cards"
+            label_singular: "Service card"
             widget: list
+            summary: "{{fields.title}}"
             fields:
               - { name: title, label: "Title", widget: string }
-              - { name: image, label: "Image", widget: image }
-              - { name: alt, label: "Image alt text", widget: string }
-              - { name: body, label: "Body", widget: text }
-          - { name: whyChooseHeading, label: "Why choose heading", widget: string }
-          - { name: whyChooseBody, label: "Why choose body", widget: text }
-          - { name: whyChooseBadges, label: "Why choose badges", widget: list, field: { name: item, label: "Badge", widget: string } }
-          - { name: expectationsHeading, label: "Expectations heading", widget: string }
-          - { name: expectations, label: "Expectations", widget: list, field: { name: item, label: "Expectation", widget: string } }
-          - name: spotlight
-            label: "Spotlight section"
-            widget: object
+              - { name: image, label: "Photo", widget: image }
+              - { name: alt, label: "Photo description", widget: string }
+              - { name: body, label: "Text", widget: text }
+          - { name: processHeading, label: "HOW IT WORKS — Heading", widget: string }
+          - { name: processIntro, label: "HOW IT WORKS — Intro text", widget: text }
+          - name: processSteps
+            label: "HOW IT WORKS — Steps"
+            label_singular: "Step"
+            widget: list
+            summary: "{{fields.number}}. {{fields.title}}"
             fields:
-              - { name: image, label: "Image", widget: image }
-              - { name: alt, label: "Image alt text", widget: string }
+              - { name: number, label: "Step number", widget: string }
               - { name: title, label: "Title", widget: string }
-              - { name: body, label: "Body", widget: text }
-          - { name: reviewsHeading, label: "Reviews heading", widget: string }
-          - { name: ctaBandHeading, label: "CTA heading", widget: string }
-          - { name: ctaBandBody, label: "CTA body", widget: text }
-          - { name: ctaBandPrimary, label: "Primary CTA label", widget: string }
-          - { name: ctaBandSecondary, label: "Secondary CTA label", widget: string }
-          - { name: contactHeading, label: "Contact heading", widget: string }
-          - { name: contactBody, label: "Contact body", widget: text }
-          - { name: trustedHeading, label: "Trusted heading", widget: string }
-          - { name: trustedBody, label: "Trusted body", widget: text }
-          - { name: trustedBadges, label: "Trusted badges", widget: list, field: { name: item, label: "Badge", widget: string } }
-          - { name: credentialsLink, label: "Credentials link label", widget: string }
-          - { name: giftHeading, label: "Gift certificate heading", widget: string }
-          - { name: giftBody, label: "Gift certificate text", widget: text }
-          - { name: giftNote, label: "Gift certificate small print", widget: string }
-          - { name: giftCta, label: "Gift certificate button label", widget: string }
+              - { name: body, label: "Text", widget: text }
+          - { name: reviewsHeading, label: "REVIEWS — Heading", widget: string, hint: "The reviews themselves are edited under Business Info." }
+          - { name: giftHeading, label: "GIFT CERTIFICATES — Heading", widget: string }
+          - { name: giftBody, label: "GIFT CERTIFICATES — Text", widget: text }
+          - { name: giftNote, label: "GIFT CERTIFICATES — Small print", widget: string }
+          - { name: giftCta, label: "GIFT CERTIFICATES — Button text", widget: string }
+          - { name: contactHeading, label: "BOOKING — Heading", widget: string }
+          - { name: contactBody, label: "BOOKING — Text", widget: text }
+          - { name: trustedHeading, label: "LICENSED CARE — Heading", widget: string }
+          - { name: trustedBody, label: "LICENSED CARE — Text", widget: text }
+          - { name: trustedBadges, label: "LICENSED CARE — Tags", widget: list, field: { name: item, label: "Tag", widget: string } }
+          - { name: credentialsLink, label: "LICENSED CARE — Credentials button text", widget: string }
 
   - name: servicesPage
     label: "Services Page"
@@ -144,14 +129,14 @@ collections:
         label: "Services page content"
         file: "site/content/site-services.json"
         fields:
-          - { name: eyebrow, label: "Eyebrow", widget: string }
+          - { name: eyebrow, label: "Small label above headline", widget: string }
           - { name: headline, label: "Headline", widget: string }
-          - { name: intro, label: "Intro", widget: text }
-          - { name: careHeading, label: "Care heading", widget: string }
-          - { name: careBody, label: "Care body", widget: text }
-          - { name: careBadges, label: "Care badges", widget: list, field: { name: item, label: "Badge", widget: string } }
-          - { name: popularHeading, label: "Popular services heading", widget: string }
-          - { name: popularItems, label: "Popular services", widget: list, field: { name: item, label: "Service", widget: string } }
+          - { name: intro, label: "Intro text", widget: text }
+          - { name: careHeading, label: "'What we help with' heading", widget: string }
+          - { name: careBody, label: "'What we help with' text", widget: text }
+          - { name: careBadges, label: "'What we help with' tags", widget: list, field: { name: item, label: "Tag", widget: string } }
+          - { name: popularHeading, label: "'Most requested' heading", widget: string }
+          - { name: popularItems, label: "'Most requested' list", widget: list, field: { name: item, label: "Service", widget: string } }
           - name: serviceGroups
             label: "Service groups & prices"
             label_singular: "Service group"
@@ -169,12 +154,12 @@ collections:
                   - { name: price, label: "Price", widget: string, hint: "e.g. $75.00" }
               - { name: benefitSummary, label: "Benefits summary", widget: text, required: false }
               - { name: benefitAnchor, label: "Benefits page section id", widget: string, required: false, hint: "Links to that section on the Benefits page, e.g. massage or detox. Leave blank for no link." }
-          - { name: pricingHeading, label: "Pricing heading", widget: string }
-          - { name: pricingBody, label: "Pricing body", widget: text }
-          - { name: pricingNote, label: "Pricing note", widget: text }
-          - { name: ctaHeading, label: "CTA heading", widget: string }
-          - { name: ctaBody, label: "CTA body", widget: text }
-          - { name: ctaLink, label: "CTA link label", widget: string }
+          - { name: pricingHeading, label: "Pricing box heading", widget: string }
+          - { name: pricingBody, label: "Pricing box text", widget: text, hint: "The phone number is added automatically at the end." }
+          - { name: pricingNote, label: "Pricing box small print", widget: text }
+          - { name: ctaHeading, label: "Bottom heading", widget: string }
+          - { name: ctaBody, label: "Bottom text", widget: text }
+          - { name: ctaLink, label: "Bottom button text", widget: string }
 
   - name: aboutPage
     label: "About Page"
@@ -183,20 +168,20 @@ collections:
         label: "About page content"
         file: "site/content/site-about.json"
         fields:
-          - { name: eyebrow, label: "Eyebrow", widget: string }
+          - { name: eyebrow, label: "Small label above headline", widget: string }
           - { name: headline, label: "Headline", widget: string }
-          - { name: intro, label: "Intro", widget: string }
-          - { name: image, label: "Hero image", widget: image }
-          - { name: imageAlt, label: "Hero image alt text", widget: string }
-          - { name: paragraphs, label: "Paragraphs", widget: list, field: { name: paragraph, label: "Paragraph", widget: text } }
-          - { name: whyChooseHeading, label: "Why choose heading", widget: string }
-          - { name: whyChooseItems, label: "Why choose items", widget: list, field: { name: item, label: "Item", widget: string } }
+          - { name: intro, label: "Intro text", widget: string }
+          - { name: image, label: "Photo", widget: image, hint: "A photo of Clara works best here." }
+          - { name: imageAlt, label: "Photo description", widget: string }
+          - { name: paragraphs, label: "Story paragraphs", widget: list, field: { name: paragraph, label: "Paragraph", widget: text } }
+          - { name: whyChooseHeading, label: "Side box heading", widget: string }
+          - { name: whyChooseItems, label: "Side box list", widget: list, field: { name: item, label: "Item", widget: string } }
           - { name: specialtiesHeading, label: "Specialties heading", widget: string }
-          - { name: specialtiesIntro, label: "Specialties intro", widget: string }
+          - { name: specialtiesIntro, label: "Specialties intro text", widget: string }
           - { name: specialties, label: "Specialties", widget: list, field: { name: item, label: "Specialty", widget: string } }
-          - { name: ctaHeading, label: "CTA heading", widget: string }
-          - { name: ctaBody, label: "CTA body", widget: string }
-          - { name: ctaButton, label: "CTA button label", widget: string }
+          - { name: ctaHeading, label: "Bottom heading", widget: string }
+          - { name: ctaBody, label: "Bottom text", widget: string }
+          - { name: ctaButton, label: "Bottom button text", widget: string, hint: "The phone number is added automatically." }
 
   - name: contactPage
     label: "Contact Page"
@@ -205,12 +190,12 @@ collections:
         label: "Contact page content"
         file: "site/content/site-contact.json"
         fields:
-          - { name: eyebrow, label: "Eyebrow", widget: string }
+          - { name: eyebrow, label: "Small label above headline", widget: string }
           - { name: headline, label: "Headline", widget: string }
-          - { name: intro, label: "Intro", widget: text }
-          - { name: bookHeading, label: "Book heading", widget: string }
-          - { name: goodToKnowHeading, label: "Good to know heading", widget: string }
-          - { name: goodToKnowItems, label: "Steps", widget: list, field: { name: item, label: "Step", widget: string } }
+          - { name: intro, label: "Intro text", widget: text }
+          - { name: bookHeading, label: "Booking box heading", widget: string, hint: "Phone, address and hours come from Business Info." }
+          - { name: goodToKnowHeading, label: "'Good to know' heading", widget: string }
+          - { name: goodToKnowItems, label: "'Good to know' list", widget: list, field: { name: item, label: "Item", widget: string } }
           - { name: faqLink, label: "FAQ button text", widget: string }
 
   - name: faqPage
@@ -220,26 +205,30 @@ collections:
         label: "FAQ page content"
         file: "site/content/site-faq.json"
         fields:
-          - { name: eyebrow, label: "Eyebrow", widget: string }
+          - { name: eyebrow, label: "Small label above headline", widget: string }
           - { name: headline, label: "Headline", widget: string }
-          - { name: intro, label: "Intro", widget: text }
+          - { name: intro, label: "Intro text", widget: text }
           - name: faqs
-            label: "FAQs"
+            label: "Questions & answers"
+            label_singular: "Question"
             widget: list
+            summary: "{{fields.q}}"
             fields:
               - { name: q, label: "Question", widget: string }
               - { name: a, label: "Answer", widget: text }
           - { name: policiesHeading, label: "Policies heading", widget: string }
-          - { name: policiesIntro, label: "Policies intro", widget: text }
+          - { name: policiesIntro, label: "Policies intro text", widget: text }
           - name: policies
-            label: "Policy cards"
+            label: "Policies"
+            label_singular: "Policy"
             widget: list
+            summary: "{{fields.title}}"
             fields:
               - { name: title, label: "Title", widget: string }
-              - { name: body, label: "Body", widget: text }
-          - { name: ctaHeading, label: "CTA heading", widget: string }
-          - { name: ctaBody, label: "CTA body", widget: text }
-          - { name: ctaLink, label: "CTA button text", widget: string }
+              - { name: body, label: "Text", widget: text }
+          - { name: ctaHeading, label: "Bottom heading", widget: string }
+          - { name: ctaBody, label: "Bottom text", widget: text }
+          - { name: ctaLink, label: "Bottom button text", widget: string }
 
   - name: schoolPage
     label: "School Page"
@@ -248,18 +237,18 @@ collections:
         label: "School page content"
         file: "site/content/site-school.json"
         fields:
-          - { name: eyebrow, label: "Eyebrow", widget: string }
+          - { name: eyebrow, label: "Small label above headline", widget: string }
           - { name: headline, label: "Headline", widget: string }
-          - { name: intro, label: "Intro", widget: text }
-          - { name: cardHeading, label: "Card heading", widget: string }
-          - { name: cardBody, label: "Card body", widget: text }
-          - { name: cardBadges, label: "Card badges", widget: list, field: { name: item, label: "Badge", widget: string } }
-          - { name: interestHeading, label: "Interest heading", widget: string }
-          - { name: interestBody, label: "Interest body", widget: text }
-          - { name: studentHeading, label: "Student heading", widget: string }
-          - { name: studentIntro, label: "Student intro", widget: text }
-          - { name: ctaPrimary, label: "Primary CTA label", widget: string }
-          - { name: ctaSecondary, label: "Secondary CTA label", widget: string }
+          - { name: intro, label: "Intro text", widget: text }
+          - { name: cardHeading, label: "School box heading", widget: string }
+          - { name: cardBody, label: "School box text", widget: text }
+          - { name: cardBadges, label: "School box tags", widget: list, field: { name: item, label: "Tag", widget: string } }
+          - { name: interestHeading, label: "Newsletter box heading", widget: string }
+          - { name: interestBody, label: "Newsletter box text", widget: text }
+          - { name: studentHeading, label: "Student massages heading", widget: string, hint: "Prices are edited under Business Info → Student massage pricing." }
+          - { name: studentIntro, label: "Student massages text", widget: text }
+          - { name: ctaPrimary, widget: hidden }
+          - { name: ctaSecondary, label: "Student massages button text", widget: string }
 
   - name: benefitsPage
     label: "Benefits Page"
