@@ -24,6 +24,7 @@
     { "day": "Sunday",    "hours": null }
   ],
   "giftCertNote": "Gift certificates are available for every service. Call or text to purchase.",
+  "newsletterText": "Join our newsletter for wellness tips and news about our upcoming School of Massage Therapy.",
   "studentPricing": [
     { "service": "Half hour massage", "price": "$25.00" },
     { "service": "Hour massage", "price": "$45.00" },

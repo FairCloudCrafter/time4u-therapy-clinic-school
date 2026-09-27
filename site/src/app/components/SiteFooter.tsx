@@ -43,7 +43,7 @@ export default function SiteFooter() {
                 <Icon name="clock" /> {business.hours} &middot; {business.bookingNote}
               </li>
             </ul>
-            <p className="tiny">{business.movingNotice}</p>
+            {business.movingNotice && <p className="tiny">{business.movingNotice}</p>}
           </div>
 
           <nav className="footer-nav" aria-label="Footer navigation">
@@ -57,10 +57,7 @@ export default function SiteFooter() {
 
           <div className="footer-newsletter">
             <h3>Stay in touch</h3>
-            <p className="tiny">
-              Join our newsletter for wellness tips and news about our upcoming School of
-              Massage Therapy.
-            </p>
+            <p className="tiny">{business.newsletterText}</p>
             <NewsletterForm />
             <p className="tiny">
               Prefer to talk?{" "}

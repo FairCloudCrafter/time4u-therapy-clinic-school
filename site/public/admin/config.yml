@@ -6,8 +6,17 @@ backend:
   repo: FairCloudCrafter/time4u-therapy-clinic-school
   branch: main
   base_url: https://cms-auth.time4utherapymassageclinicandschool.com
+  commit_messages:
+    update: "Website edit: {{collection}} — {{path}}"
+    uploadMedia: "Website edit: add photo {{path}}"
+    deleteMedia: "Website edit: remove photo {{path}}"
 
 local_backend: true
+
+site_url: https://time4utherapymassageclinicandschool.com
+display_url: https://time4utherapymassageclinicandschool.com
+logo_url: /apple-icon.png
+show_preview_links: false
 
 media_folder: "site/public/images"
 public_folder: "/images"
@@ -16,6 +25,7 @@ collections:
   - name: business
     label: "Business Info"
     description: "Contact details, hours, and Google reviews shown across the site."
+    editor: { preview: false }
     files:
       - name: details
         label: "Details & Reviews"
@@ -42,7 +52,8 @@ collections:
           - { name: licenseNumber, label: "License number", widget: string }
           - { name: abmpMember, label: "ABMP member (show in footer)", widget: boolean, required: false }
           - { name: reviewsRating, label: "Google rating text", widget: string, hint: "e.g. 4.8 out of 5" }
-          - { name: giftCertNote, label: "Gift certificate text (Contact page)", widget: text }
+          - { name: giftCertNote, label: "Gift certificate text (Contact page)", widget: text, hint: "The heading and button come from Home Page → Gift Certificates." }
+          - { name: newsletterText, label: "Newsletter blurb (footer)", widget: text }
           - { name: facebook, label: "Facebook page link", widget: string, required: false, hint: "Full link starting with https://. Leave blank to hide." }
           - { name: instagram, label: "Instagram link", widget: string, required: false, hint: "Full link starting with https://. Leave blank to hide." }
           - name: studentPricing
@@ -58,6 +69,8 @@ collections:
             label: "Reviews"
             label_singular: "Review"
             widget: list
+            hint: "Shown on the home page. Copy the text exactly as the client wrote it."
+            summary: "{{fields.author}}"
             fields:
               - { name: quote, label: "Review text", widget: text }
               - { name: author, label: "Reviewer name", widget: string }
@@ -65,6 +78,8 @@ collections:
 
   - name: homePage
     label: "Home Page"
+    description: "Everything on the front page, top to bottom."
+    editor: { preview: false }
     files:
       - name: home
         label: "Home page content"
@@ -77,12 +92,13 @@ collections:
           - { name: ctaPrimary, label: "TOP — Call button text", widget: string }
           - { name: ctaSecondary, label: "TOP — Text-message button text", widget: string }
           - { name: ctaTertiary, label: "TOP — Services link text", widget: string }
-          - { name: heroImage, label: "TOP — Photo", widget: image, hint: "A wide (landscape) photo works best." }
+          - { name: heroImage, label: "TOP — Photo", widget: image, media_library: { config: { max_file_size: 4000000 } }, hint: "A tall (portrait) or square photo works best, under 4 MB. Your address, phone and hours are shown on top of it automatically." }
           - { name: heroImageAlt, label: "TOP — Photo description", widget: string, hint: "Describe the photo for screen readers, e.g. 'Clara giving a back massage'." }
           - name: trustBadges
             label: "TOP — Highlight boxes"
             label_singular: "Highlight"
             widget: list
+            hint: "Three short facts under the buttons. The first one gets gold stars — use it for the Google rating."
             summary: "{{fields.value}} — {{fields.label}}"
             fields:
               - { name: value, label: "Big text", widget: string, hint: "e.g. 4.8 out of 5" }
@@ -93,10 +109,11 @@ collections:
             label: "SERVICES — Service cards"
             label_singular: "Service card"
             widget: list
+            hint: "Three cards work best. Each card links to the Services page."
             summary: "{{fields.title}}"
             fields:
               - { name: title, label: "Title", widget: string }
-              - { name: image, label: "Photo", widget: image }
+              - { name: image, label: "Photo", widget: image, media_library: { config: { max_file_size: 4000000 } }, hint: "Landscape photo, roughly 4:3, under 4 MB." }
               - { name: alt, label: "Photo description", widget: string }
               - { name: body, label: "Text", widget: text }
           - { name: processHeading, label: "HOW IT WORKS — Heading", widget: string }
@@ -111,10 +128,10 @@ collections:
               - { name: title, label: "Title", widget: string }
               - { name: body, label: "Text", widget: text }
           - { name: reviewsHeading, label: "REVIEWS — Heading", widget: string, hint: "The reviews themselves are edited under Business Info." }
-          - { name: giftHeading, label: "GIFT CERTIFICATES — Heading", widget: string }
+          - { name: giftHeading, label: "GIFT CERTIFICATES — Heading", widget: string, hint: "Also used on the Contact page." }
           - { name: giftBody, label: "GIFT CERTIFICATES — Text", widget: text }
           - { name: giftNote, label: "GIFT CERTIFICATES — Small print", widget: string }
-          - { name: giftCta, label: "GIFT CERTIFICATES — Button text", widget: string }
+          - { name: giftCta, label: "GIFT CERTIFICATES — Button text", widget: string, hint: "Also used on the Contact page." }
           - { name: contactHeading, label: "BOOKING — Heading", widget: string }
           - { name: contactBody, label: "BOOKING — Text", widget: text }
           - { name: trustedHeading, label: "LICENSED CARE — Heading", widget: string }
@@ -124,6 +141,8 @@ collections:
 
   - name: servicesPage
     label: "Services Page"
+    description: "Service groups and prices."
+    editor: { preview: false }
     files:
       - name: services
         label: "Services page content"
@@ -141,6 +160,7 @@ collections:
             label: "Service groups & prices"
             label_singular: "Service group"
             widget: list
+            summary: "{{fields.title}}"
             fields:
               - { name: title, label: "Group title", widget: string }
               - { name: description, label: "Group description", widget: text, required: false }
@@ -163,6 +183,8 @@ collections:
 
   - name: aboutPage
     label: "About Page"
+    description: "Clara's story, specialties, and photo."
+    editor: { preview: false }
     files:
       - name: about
         label: "About page content"
@@ -171,7 +193,7 @@ collections:
           - { name: eyebrow, label: "Small label above headline", widget: string }
           - { name: headline, label: "Headline", widget: string }
           - { name: intro, label: "Intro text", widget: string }
-          - { name: image, label: "Photo", widget: image, hint: "A photo of Clara works best here." }
+          - { name: image, label: "Photo", widget: image, media_library: { config: { max_file_size: 4000000 } }, hint: "A photo of Clara works best here (under 4 MB)." }
           - { name: imageAlt, label: "Photo description", widget: string }
           - { name: paragraphs, label: "Story paragraphs", widget: list, field: { name: paragraph, label: "Paragraph", widget: text } }
           - { name: whyChooseHeading, label: "Side box heading", widget: string }
@@ -185,6 +207,8 @@ collections:
 
   - name: contactPage
     label: "Contact Page"
+    description: "Booking instructions. Phone, address and hours are edited under Business Info."
+    editor: { preview: false }
     files:
       - name: contact
         label: "Contact page content"
@@ -197,9 +221,13 @@ collections:
           - { name: goodToKnowHeading, label: "'Good to know' heading", widget: string }
           - { name: goodToKnowItems, label: "'Good to know' list", widget: list, field: { name: item, label: "Item", widget: string } }
           - { name: faqLink, label: "FAQ button text", widget: string }
+          - { name: hoursHeading, label: "Hours box heading", widget: string }
+          - { name: mapHeading, label: "Map box heading", widget: string }
 
   - name: faqPage
     label: "FAQ Page"
+    description: "Questions, answers, and booking policies."
+    editor: { preview: false }
     files:
       - name: faq
         label: "FAQ page content"
@@ -232,6 +260,8 @@ collections:
 
   - name: schoolPage
     label: "School Page"
+    description: "School of Massage Therapy info. Student prices are under Business Info."
+    editor: { preview: false }
     files:
       - name: school
         label: "School page content"
@@ -252,6 +282,8 @@ collections:
 
   - name: benefitsPage
     label: "Benefits Page"
+    description: "What each service does and how to prepare."
+    editor: { preview: false }
     files:
       - name: benefits
         label: "Benefits page content"
@@ -286,6 +318,8 @@ collections:
 
   - name: credentialsPage
     label: "Credentials Page"
+    description: "License, education, and memberships."
+    editor: { preview: false }
     files:
       - name: credentials
         label: "Credentials page content"

@@ -5,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Time 4U — Content Editor</title>
+    <style>
+      #cms-loading { font: 15px/1.5 system-ui, sans-serif; color: #566579; text-align: center; padding: 4rem 1rem; }
+      #nc-root:not(:empty) + #cms-loading { display: none; }
+      /* Decap still renders a never-resolving "Check for Preview" button despite show_preview_links: false. */
+      [class*="PreviewButtonContainer"] { display: none !important; }
+    </style>
   </head>
   <body>
     <!-- Decap CMS: the login-and-edit dashboard Clara uses. -->
-    <script src="https://unpkg.com/decap-cms@^3.8.4/dist/decap-cms.js"></script>
+    <div id="nc-root"></div>
+    <p id="cms-loading">Loading the website editor…</p>
+    <script src="https://unpkg.com/decap-cms@3.16.3/dist/decap-cms.js"></script>
+    <script>
+      // Clara signs in with an email code (Cloudflare Access), not a GitHub account — relabel the button.
+      var en = window.CMS && CMS.getLocale && CMS.getLocale("en");
+      if (en) {
+        CMS.registerLocale("en", Object.assign({}, en, {
+          auth: Object.assign({}, en.auth, {
+            loginWithGitHub: "Sign in to edit the website",
+            loggingIn: "Signing in…",
+          }),
+        }));
+      }
+    </script>
   </body>
 </html>

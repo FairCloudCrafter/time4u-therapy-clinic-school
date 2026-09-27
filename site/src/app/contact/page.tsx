@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import contactContent from "../../../content/site-contact.json";
+import homeContent from "../../../content/site-home.json";
 import Icon from "../components/Icon";
 import { business, phoneDigits, fullAddress } from "../lib/business";
 
@@ -34,7 +35,7 @@ export default function ContactPage() {
               <li>Hours: {business.hours}</li>
               <li>{business.bookingNote} &middot; Self-pay (no insurance)</li>
             </ul>
-            <p className="tiny">{business.movingNotice}</p>
+            {business.movingNotice && <p className="tiny">{business.movingNotice}</p>}
             <div className="hero-cta">
               <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
                 Call Now
@@ -65,7 +66,7 @@ export default function ContactPage() {
       <section className="section-pad">
         <div className="wrap grid-2">
           <article className="note-card">
-            <h3>Office hours</h3>
+            <h3>{contact.hoursHeading}</h3>
             <div className="hours-table">
               {business.hoursByDay.map((row) => (
                 <div key={row.day} className={`hours-row${row.hours ? "" : " closed"}`}>
@@ -80,7 +81,7 @@ export default function ContactPage() {
           </article>
 
           <article className="note-card">
-            <h3>Find us</h3>
+            <h3>{contact.mapHeading}</h3>
             <p>{fullAddress}</p>
             <div className="map-embed">
               <iframe
@@ -112,12 +113,12 @@ export default function ContactPage() {
               <Icon name="gift" />
             </div>
             <div>
-              <h2>Give the Gift of Wellness</h2>
+              <h2>{homeContent.giftHeading}</h2>
               <p>{business.giftCertNote}</p>
             </div>
             <div className="hero-cta">
               <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
-                Purchase a Gift Certificate
+                {homeContent.giftCta}
               </a>
               <a className="btn btn-outline" href={`sms:${phoneDigits}`}>
                 Text to Purchase

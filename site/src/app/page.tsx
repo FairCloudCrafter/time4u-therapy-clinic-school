@@ -186,7 +186,7 @@ export default function Home() {
                 <Icon name="clock" /> {business.hours} &middot; {business.bookingNote}
               </li>
             </ul>
-            <p className="tiny">{business.movingNotice}</p>
+            {business.movingNotice && <p className="tiny">{business.movingNotice}</p>}
             <div className="hero-cta">
               <a className="btn btn-gold btn-lg" href={`tel:${phoneDigits}`}>
                 <Icon name="phone" /> Call Now
