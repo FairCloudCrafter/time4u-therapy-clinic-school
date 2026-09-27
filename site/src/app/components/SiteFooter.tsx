@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { business, fullAddress, phoneDigits } from "../lib/business";
+import Icon from "./Icon";
+import Logo from "./Logo";
+import MobileCta from "./MobileCta";
 import NewsletterForm from "./NewsletterForm";
 
 const footerLinks = [
@@ -17,53 +20,56 @@ export default function SiteFooter() {
 
   return (
     <>
-      <div className="mobile-cta" aria-label="Quick actions">
-        <div className="mobile-cta-inner">
-          <a className="btn btn-primary" href={`tel:${phoneDigits}`}>
-            Call
-          </a>
-          <a className="btn btn-outline" href={`sms:${phoneDigits}`}>
-            Text
-          </a>
-          <Link className="btn btn-primary" href="/contact">
-            Book
-          </Link>
-        </div>
-      </div>
+      <MobileCta />
 
       <footer className="site-footer">
         <div className="wrap footer-grid">
-          <div>
-            <h3>{business.name}</h3>
-            <p className="tiny">
-              {fullAddress}
-              <br />
-              {business.phone} &middot; {business.hours} &middot; {business.bookingNote}
-            </p>
+          <div className="footer-brand">
+            <div className="brand">
+              <Logo />
+              <div className="brand-lines">
+                <div className="brand-main">{business.shortName}</div>
+                <div className="brand-sub">Clinic and School of Massage Therapy</div>
+              </div>
+            </div>
+            <ul className="footer-facts">
+              <li>
+                <Icon name="pin" /> {fullAddress}
+              </li>
+              <li>
+                <Icon name="phone" /> <a href={`tel:${phoneDigits}`}>{business.phone}</a>
+              </li>
+              <li>
+                <Icon name="clock" /> {business.hours} &middot; {business.bookingNote}
+              </li>
+            </ul>
             <p className="tiny">{business.movingNotice}</p>
-            <nav className="footer-nav" aria-label="Footer navigation">
-              {footerLinks.map((link) => (
-                <Link key={link.href} href={link.href}>
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
           </div>
-          <div className="card" style={{ padding: "1rem" }}>
+
+          <nav className="footer-nav" aria-label="Footer navigation">
+            <h3>Explore</h3>
+            {footerLinks.map((link) => (
+              <Link key={link.href} href={link.href}>
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="footer-newsletter">
             <h3>Stay in touch</h3>
-            <p className="tiny" style={{ marginTop: "0.5rem" }}>
+            <p className="tiny">
               Join our newsletter for wellness tips and news about our upcoming School of
               Massage Therapy.
             </p>
             <NewsletterForm />
-            <p className="tiny" style={{ marginTop: "0.75rem" }}>
+            <p className="tiny">
               Prefer to talk?{" "}
               <a href={`tel:${phoneDigits}`}>Call or text {business.phone}</a>.
             </p>
           </div>
         </div>
-        <div className="wrap">
-          <p className="tiny footer-legal">
+        <div className="wrap footer-legal">
+          <p className="tiny">
             &copy; {year} {business.name} &middot; Clara Schoonover, L.M.T. &middot; Licensed in Oklahoma
             {business.abmpMember && <> &middot; ABMP Member</>}
           </p>

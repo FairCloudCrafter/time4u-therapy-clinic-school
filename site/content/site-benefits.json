@@ -10,7 +10,7 @@
       "Arrive 5–10 minutes early to complete your intake form",
       "Wear or bring clothing you can easily change out of",
       "Tell Clara what's bothering you — she adjusts every session to your feedback",
-      "Drink extra water after your session to help your body flush metabolic waste"
+      "Drink water afterward as needed, especially if you feel thirsty or lightheaded"
     ]
   },
 
@@ -18,7 +18,7 @@
     {
       "id": "massage",
       "name": "Massage Therapy",
-      "tagline": "The most effective tool for managing stress, pain, and tension.",
+      "tagline": "A practical way to ease stress, pain, and tension.",
       "description": "Stress takes a real toll on how we feel, sleep, and move. Therapeutic massage is one of the most researched ways to ease it. Many clients find regular sessions help them relax, sleep better, and recover from the wear of daily life.",
       "benefits": [
         "May ease low-back pain and improve range of motion",
@@ -45,7 +45,7 @@
         "A soothing option for tired, swollen feet during pregnancy",
         "Pairs well with massage for a full-body reset"
       ],
-      "disclaimer": "Reflexology cannot promise to cure any disease or illness. It is not suitable for people with verruca, athlete's foot, osteoporosis, or recently broken bones in the ankle, foot, or hand. Reflexology should not replace expert care by a qualified medical practitioner."
+      "disclaimer": "Reflexology is not intended to diagnose, treat, or cure any disease or illness. It is not suitable for people with verruca, athlete's foot, osteoporosis, or recently broken bones in the ankle, foot, or hand. Reflexology should not replace care from a qualified medical practitioner."
     },
     {
       "id": "aromatherapy",
@@ -66,12 +66,12 @@
       "id": "waxing",
       "name": "Body Waxing & Sugaring",
       "tagline": "Longer-lasting, smoother results — especially with natural sugaring.",
-      "description": "Waxing removes hair directly from the root, producing results that last 2–3 weeks. After repeated sessions, regrowth becomes finer and sparser over time. Sugaring goes further — using a 100% natural paste of sugar, water, and lemon juice that is gentler on the skin and can even be applied over the same area multiple times without causing damage.",
+      "description": "Waxing removes hair directly from the root, producing results that last 2–3 weeks. After repeated sessions, regrowth often becomes finer and sparser over time. Sugaring uses a sugar-based paste made from sugar, water, and lemon juice that can feel gentler than traditional waxing for some clients.",
       "benefits": [
         "Results last 2–3 weeks; hair grows back finer and softer each time",
-        "Sugaring paste is 100% natural and organic — made only from sugar, water, and lemon juice",
-        "Applied at body temperature — will never burn the skin",
-        "Suitable for sensitive skin, eczema, and psoriasis",
+        "Sugaring uses a simple sugar-based paste made from sugar, water, and lemon juice",
+        "Applied at body temperature rather than hot wax",
+        "Often chosen by clients with sensitive skin; tell Clara about any skin conditions before your service",
         "Exfoliates dead skin cells during hair removal",
         "Causes less discomfort than traditional waxing over time",
         "No sticky residue — cleans up easily with water"
@@ -80,7 +80,7 @@
     },
     {
       "id": "detox",
-      "name": "Ionic Detox Foot Bath",
+      "name": "Ionic Foot Bath",
       "tagline": "A warm, relaxing foot soak.",
       "description": "The ionic foot bath is a warm, relaxing soak that many clients enjoy as a complement to massage or on its own as a wellness break. It's gentle and non-invasive — you simply sit back and relax.",
       "benefits": [

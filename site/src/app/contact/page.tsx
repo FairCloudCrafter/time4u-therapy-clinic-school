@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import contactContent from "../../../content/site-contact.json";
+import Icon from "../components/Icon";
 import { business, phoneDigits, fullAddress } from "../lib/business";
 
 export const metadata: Metadata = {
@@ -60,9 +61,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Office hours */}
+      {/* Office hours + map */}
       <section className="section-pad">
-        <div className="wrap">
+        <div className="wrap grid-2">
           <article className="note-card">
             <h3>Office hours</h3>
             <div className="hours-table">
@@ -77,12 +78,7 @@ export default function ContactPage() {
               {business.bookingNote}. Please schedule 1–2 weeks in advance.
             </p>
           </article>
-        </div>
-      </section>
 
-      {/* Map */}
-      <section className="section-pad">
-        <div className="wrap">
           <article className="note-card">
             <h3>Find us</h3>
             <p>{fullAddress}</p>
@@ -112,7 +108,9 @@ export default function ContactPage() {
       <section className="section-pad">
         <div className="wrap">
           <article className="gift-cert-band">
-            <div className="gift-cert-icon" aria-hidden="true">🎁</div>
+            <div className="gift-cert-icon">
+              <Icon name="gift" />
+            </div>
             <div>
               <h2>Give the Gift of Wellness</h2>
               <p>{business.giftCertNote}</p>

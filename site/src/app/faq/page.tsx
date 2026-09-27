@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import faqContent from "../../../content/site-faq.json";
-import { business } from "../lib/business";
 
 export const metadata: Metadata = {
   title: "FAQ & Policies",
