@@ -1675,6 +1675,11 @@ h3 {
   color: #b3261e;
 }
 
+/* The newsletter page already has the form; skip the footer copy. */
+.newsletter-page ~ .site-footer .footer-newsletter {
+  display: none;
+}
+
 /* ── Footer ─────────────────────────────────────────────── */
 .site-footer {
   margin-top: var(--space);
