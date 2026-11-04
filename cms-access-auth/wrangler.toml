@@ -22,8 +22,8 @@ SITE_ORIGINS = "https://time4utherapymassageclinicandschool.com,https://www.time
 # the Access application:
 #   CF_ACCESS_TEAM_DOMAIN = your Access team subdomain, e.g. "faircloudcrafter"
 #   CF_ACCESS_AUD         = the Access application's Audience (AUD) tag
-CF_ACCESS_TEAM_DOMAIN = ""
-CF_ACCESS_AUD = ""
+CF_ACCESS_TEAM_DOMAIN = "lively-sea-ff19"
+CF_ACCESS_AUD = "3483b7025114ec5f3ca79b2c315c49d406865094f4bb4c831cebfc08701b105a"
 
 # --- Secret (do NOT put here) --------------------------------------------------
 # A fine-grained GitHub PAT scoped to the content repo, Contents: Read and write:

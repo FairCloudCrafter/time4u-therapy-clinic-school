@@ -18,6 +18,17 @@ Initial repository scaffold for Time 4U Therapy Massage Clinic and School websit
 - Content editor: https://time4utherapymassageclinicandschool.com/admin/ (Decap CMS, config in `site/public/admin/config.yml`).
 - The old GitHub Pages preview (`docs/`) has been retired.
 
+## Clara's Editing Handoff
+- [Clara's website editing guide](CLARA-WEBSITE-GUIDE.md): sign-in, publishing, event announcements, photos, prices, and troubleshooting.
+- Intended sign-in: Cloudflare Access email code via `cms-access-auth/`, not the legacy GitHub OAuth worker.
+- Before handoff, verify Access allows Clara's approved email, configure the worker's Access team domain and application audience, and add a repository-scoped publishing credential only after Access protection is verified.
+- Complete a real sign-in and small publish test with Clara, confirm the public site updates, and restore the test edit. Until that passes, independent editing is not verified.
+
+### Access Setup (November 3, 2026)
+- Cloudflare Access app `cms-auth.time4utherapymassageclinicandschool.com`: login method **One-time PIN** only (instant auth), policy **Time 4U website editors** = Allow, Emails: Time4utherapymassage@outlook.com. Add more editors in that policy.
+- Worker `cms-access-auth` deployed with `CF_ACCESS_TEAM_DOMAIN=lively-sea-ff19` and the app's AUD; `GITHUB_TOKEN` secret is present (value and permissions not inspected).
+- Remaining acceptance test: sign in with the email code, publish a small change, confirm it goes live, then restore it.
+
 ## Local Website App
 - Stack: Next.js + TypeScript + Tailwind CSS
 - Location: `site/`
