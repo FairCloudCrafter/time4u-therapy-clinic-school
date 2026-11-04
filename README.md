@@ -25,7 +25,7 @@ Initial repository scaffold for Time 4U Therapy Massage Clinic and School websit
 - Complete a real sign-in and small publish test with Clara, confirm the public site updates, and restore the test edit. Until that passes, independent editing is not verified.
 
 ### Access Setup (November 3, 2026)
-- Cloudflare Access app `cms-auth.time4utherapymassageclinicandschool.com`: login method **One-time PIN** only (instant auth), policy **Time 4U website editors** = Allow, Emails: Time4utherapymassage@outlook.com. Add more editors in that policy.
+- Cloudflare Access app `cms-auth.time4utherapymassageclinicandschool.com`: login method **One-time PIN** only (instant auth), policy **Time 4U website editors** = Allow, Emails: Time4utherapymassage@outlook.com, victorfelisbino@gmail.com. Add more editors in that policy.
 - Worker `cms-access-auth` deployed with `CF_ACCESS_TEAM_DOMAIN=lively-sea-ff19` and the app's AUD; `GITHUB_TOKEN` secret is present (value and permissions not inspected).
 - Remaining acceptance test: sign in with the email code, publish a small change, confirm it goes live, then restore it.
 
