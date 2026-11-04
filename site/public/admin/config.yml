@@ -42,7 +42,11 @@ collections:
             label_singular: "Day"
             widget: list
             allow_add: false
-            hint: "Keep these matching the short hours above."
+            allow_remove: false
+            allow_reorder: false
+            collapsed: true
+            summary: "{{fields.day}}: {{fields.hours}}"
+            hint: "Click a day to change it. Keep these matching the short hours above."
             fields:
               - { name: day, label: "Day", widget: string }
               - { name: hours, label: "Hours", widget: string, required: false, hint: "e.g. 9:00 am – 5:00 pm. Leave blank if closed." }
