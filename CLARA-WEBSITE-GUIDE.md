@@ -2,7 +2,7 @@
 
 Time 4U Therapy Massage Clinic and School
 
-**Handoff note:** Email-code sign-in is enabled for Time4utherapymassage@outlook.com. Complete one test publish together before relying on it for the event.
+**Handoff note:** Email-code sign-in is enabled for Time4utherapymassage@outlook.com. Do one small test change together before relying on it for the event.
 
 ## Open Your Website Editor
 
@@ -13,58 +13,55 @@ Editor: https://time4utherapymassageclinicandschool.com/admin/
 1. Open the editor on a laptop or desktop for easier editing.
 2. Click **Sign in to edit the website**. In the pop-up, enter Time4utherapymassage@outlook.com. Request a sign-in code, check your inbox and spam folder, and enter the code.
 3. If nothing opens, allow pop-ups for the site and click the button again.
-4. Choose the section you want to update from the editor's menu.
+4. Choose the section you want to update from the menu on the left. Most everyday changes are in **Quick updates**, at the top.
 
-Do not share sign-in codes. You should not need a GitHub account or a website password with the planned email sign-in. If the screen asks you to create a GitHub account, contact Victor.
+Do not share sign-in codes. You do not need a GitHub account or a website password. If the screen asks you to create a GitHub account, contact Victor.
 
-## Make and Publish a Change
+The editor works on a phone too, but a computer is easier for longer edits.
 
-1. Choose a section, then open its content entry, such as **Home Page > Home page content**.
-2. Find the field you want to change. Its label describes where it appears on the website.
-3. Make one small change first. Keep required fields filled in.
+## Make and Save a Change
+
+1. Choose a section, then click the item inside it, such as **Quick updates > Announcement, hours & contact info**.
+2. Find the field you want to change. Each label says what it is and where it appears.
+3. Make one small change first. Fields marked with a red **\*** must not be left empty.
 4. Read the text again, especially dates, times, prices and phone numbers.
-5. Use **Publish** in the top toolbar and confirm if a menu or confirmation appears.
-6. Wait for the website to rebuild. A successful publish does not mean the public page has updated yet.
+5. Click **Save** in the top right corner. A green "Entry saved" message confirms it.
+6. Wait 2-3 minutes for the website to update.
 7. Open the public website in another tab, refresh it, and check the page you changed. Check it on your phone too.
 
-Each section is published separately. There is no separate approval step configured: publishing starts the process of making your changes public. The editor's preview pane is intentionally turned off; check the real website after it updates.
+Saving makes the change public; there is no separate approval step. Each section is saved separately.
 
 ## Where to Find Things
 
 | What you want to change | Where to edit |
 | --- | --- |
-| Phone, address, business name, booking note or social links | **Business Info > Details & Reviews** |
-| Short hours description | **Business Info > Details & Reviews > Hours** |
-| Day-by-day hours on Contact | **Business Info > Details & Reviews > Hours by day (Contact page table)** |
-| Short announcement | **Business Info > Details & Reviews > Notice banner** |
-| Main homepage headline, introduction or photo | **Home Page > Home page content**, fields starting with **TOP** |
-| Homepage service cards or gift certificate wording | **Home Page > Home page content**, fields starting with **SERVICES** or **GIFT CERTIFICATES** |
-| Massage services and prices | **Services Page > Services page content > Service groups & prices** |
-| Your story or portrait | **About Page > About page content** |
-| Contact page booking instructions | **Contact Page > Contact page content** |
-| Questions, answers and policies | **FAQ Page > FAQ page content** |
-| School information | **School Page > School page content** |
-| Student massage prices | **Business Info > Details & Reviews > Student massage pricing** |
-| Benefits or credentials page wording | **Benefits Page** or **Credentials Page** |
-| Featured reviews | **Business Info > Details & Reviews > Reviews** |
-| Newsletter invitation in the footer | **Business Info > Details & Reviews > Newsletter blurb (footer)** |
+| Event or closure announcement | **Quick updates > Announcement bar (top of every page)** |
+| Opening hours | **Quick updates > Opening hours (short)** and **Opening hours by day** |
+| Phone, address or how to book | **Quick updates** |
+| Small note under your contact info | **Quick updates > Small note under your contact info** |
+| Student massage prices | **Quick updates > Student massage prices** |
+| Featured reviews and Google rating | **Quick updates > Client reviews** and **Google rating** |
+| Newsletter invitation, social links, gift certificate text | **Quick updates**, further down |
+| Main homepage headline, introduction or photo | **Home page**, fields starting with **TOP** |
+| Homepage service cards or gift certificate wording | **Home page**, fields starting with **SERVICES** or **GIFT CERTIFICATES** |
+| Massage services and prices | **Services & prices > Service groups & prices** |
+| Your story or portrait | **About Clara** |
+| Contact page booking instructions | **Contact page** |
+| Questions, answers and policies | **Questions & policies (FAQ)** |
+| School information | **School page** |
+| Benefits or credentials page wording | **Benefits page** or **Credentials page** |
 
-When changing opening hours, update both **Hours** and **Hours by day** so the short description and Contact page table agree. Homepage highlight boxes are edited separately under **Home Page > TOP - Highlight boxes**; update them too if they repeat a fact you changed.
+When changing opening hours, update both **Opening hours (short)** and **Opening hours by day** so they agree. Click a day to open it. Homepage highlight boxes are edited separately under **Home page > TOP - Highlight boxes**; update them too if they repeat a fact you changed.
 
 ## Add a Message for an Event
 
-For a short announcement:
+1. Open **Quick updates > Announcement, hours & contact info**.
+2. Type your message in **Announcement bar (top of every page)**, the first field. Include the event name, day, date, time and place, for example: *Open house Friday, Nov 7, 5-8 pm at our Chickasha studio - everyone welcome!* Use confirmed details only.
+3. Click **Save**, wait 2-3 minutes, then check the website.
 
-1. Open **Business Info > Details & Reviews**.
-2. Find **Notice banner**.
-3. Enter the event name, full date, time, location and how to get in touch. Use confirmed details only.
-4. Publish, then check the public website.
+The message appears in a gold bar at the very top of every page, on computers and phones.
 
-This notice appears near the bottom of the homepage, on the Contact page and in the footer. It is not a large banner at the top of the website.
-
-For a more prominent message, update **Home Page > TOP - Text under headline**. Keep a copy of the original text so you can restore it after the event. Publishing Business Info does not also publish Home Page changes.
-
-After the event, clear **Notice banner** and publish again. Restore any homepage wording you temporarily replaced. Announcements do not expire automatically. For a new event page, registration form or different layout, contact Victor.
+**After the event:** delete the text in **Announcement bar** and click **Save** again. The bar disappears. Announcements do not expire on their own. For a new event page, registration form or different layout, contact Victor.
 
 ## Change a Photo
 
@@ -72,13 +69,13 @@ After the event, clear **Notice banner** and publish again. Restore any homepage
 2. Use that field's image chooser to upload or select a picture, then confirm the selection.
 3. Use a photo under 4 MB. A portrait or square image works best for the top homepage photo; landscape images work best for service cards.
 4. Complete **Photo description** with a short, accurate description for visitors using screen readers.
-5. Publish the page and check the image on the public website.
+5. Click **Save** and check the image on the public website.
 
 Only use photos you have permission to publish. Get permission before showing an identifiable client. Avoid deleting images from the shared media library; another page may still use them.
 
 ## Services, Prices and Reviews
 
-Open the relevant list and expand the item you want to edit. For services, keep the service name and price together, for example `Hour massage` and `$75.00`. Confirm prices before publishing. Removing a list item removes that content when published.
+Open the relevant list and click the item you want to edit. For services, keep the service name and price together, for example `Hour massage` and `$75.00`. Confirm prices before saving. Removing a list item removes that content from the website when you save.
 
 Copy reviews accurately and keep the reviewer name and source. Do not enter private client information, appointment details or medical records anywhere in the editor.
 
@@ -96,9 +93,9 @@ Before printing event materials, scan the website and newsletter QR codes with y
 | --- | --- |
 | No sign-in code arrives | Check spam and confirm you used the approved email address. Request a fresh code if needed. |
 | Sign-in window does not open | Allow pop-ups for the editor and try again. |
-| Forbidden, Access denied or GitHub permission error | Contact Victor. Access or publishing permissions need attention; do not create new accounts to work around it. |
-| Publish is blocked | Look for a missing required field or a field highlighted with an error. |
-| Changes do not appear publicly | Wait a few minutes, refresh, then try a private browser window. If the old version remains, send Victor the page address and approximate publish time. |
-| You published incorrect wording | Open the same field, correct it and publish again. For a larger mistake, ask Victor to restore an earlier version. |
+| Forbidden, Access denied or GitHub permission error | Contact Victor. Access or saving permissions need attention; do not create new accounts to work around it. |
+| Save is greyed out or blocked | You haven't changed anything yet, or a required field (red **\***) is empty or highlighted with an error. |
+| Changes do not appear publicly | Wait a few minutes, refresh, then try a private browser window. If the old version remains, send Victor the page address and the time you saved. |
+| You saved incorrect wording | Open the same field, correct it and save again. For a larger mistake, ask Victor to restore an earlier version. |
 
 Before closing the editor, confirm your change is visible on the public website. Use the account menu to log out when working on a shared computer.
