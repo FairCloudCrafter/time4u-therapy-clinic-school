@@ -15,7 +15,7 @@ Initial repository scaffold for Time 4U Therapy Massage Clinic and School websit
 
 ## Hosting
 - Live site: https://time4utherapymassageclinicandschool.com (Cloudflare Pages, auto-deploys on push to `main`; root dir `site`, build `npm run build`, output `out`).
-- Content editor: https://time4utherapymassageclinicandschool.com/admin/ (Decap CMS, config in `site/public/admin/config.yml`).
+- Content editor: https://time4utherapymassageclinicandschool.com/admin/ (Sveltia CMS, a drop-in Decap successor; config in `site/public/admin/config.yml`).
 - The old GitHub Pages preview (`docs/`) has been retired.
 
 ## Clara's Editing Handoff
