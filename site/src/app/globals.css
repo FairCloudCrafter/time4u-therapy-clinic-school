@@ -272,6 +272,19 @@ h3 {
 }
 
 /* ── Top bar + header ───────────────────────────────────── */
+.announcement-bar {
+  background: var(--gold);
+  color: var(--navy-deep);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.announcement-bar p {
+  margin: 0;
+  padding: 0.6rem 0;
+}
+
 .topbar {
   background: var(--navy-deep);
   color: #dbe7f7;

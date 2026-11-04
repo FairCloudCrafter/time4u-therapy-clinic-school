@@ -4,30 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <title>Time 4U — Content Editor</title>
-    <style>
-      #cms-loading { font: 15px/1.5 system-ui, sans-serif; color: #566579; text-align: center; padding: 4rem 1rem; }
-      #nc-root:not(:empty) + #cms-loading { display: none; }
-      /* Decap still renders a never-resolving "Check for Preview" button despite show_preview_links: false. */
-      [class*="PreviewButtonContainer"] { display: none !important; }
-    </style>
+    <title>Time 4U — Website Editor</title>
   </head>
   <body>
-    <!-- Decap CMS: the login-and-edit dashboard Clara uses. -->
-    <div id="nc-root"></div>
-    <p id="cms-loading">Loading the website editor…</p>
-    <script src="https://unpkg.com/decap-cms@3.16.3/dist/decap-cms.js"></script>
+    <!-- Sveltia CMS: the sign-in-and-edit dashboard Clara uses. -->
     <script>
-      // Clara signs in with an email code (Cloudflare Access), not a GitHub account — relabel the button.
-      var en = window.CMS && CMS.getLocale && CMS.getLocale("en");
-      if (en) {
-        CMS.registerLocale("en", Object.assign({}, en, {
-          auth: Object.assign({}, en.auth, {
-            loginWithGitHub: "Sign in to edit the website",
-            loggingIn: "Signing in…",
-          }),
-        }));
-      }
+      // Clara signs in with an email code (Cloudflare Access), not GitHub: relabel the sign-in screen.
+      new MutationObserver(function () {
+        document.querySelectorAll("button").forEach(function (b) {
+          var t = b.textContent;
+          if (t.indexOf("Access Token") !== -1) b.hidden = true;
+          else if (t.indexOf("Sign In with") !== -1 && t.indexOf("GitHub") !== -1) b.textContent = "Sign in to edit the website";
+        });
+      }).observe(document.documentElement, { childList: true, subtree: true });
     </script>
+    <script src="https://unpkg.com/@sveltia/cms@0.258.1/dist/sveltia-cms.js"></script>
   </body>
 </html>

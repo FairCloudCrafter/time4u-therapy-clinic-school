@@ -11,13 +11,14 @@ type BusinessContent = {
   zip: string;
   hours: string;
   bookingNote: string;
+  announcement?: string;
   movingNotice?: string;
   licenseNumber: string;
   reviewsRating: string;
   facebook?: string;
   instagram?: string;
   abmpMember?: boolean;
-  hoursByDay: { day: string; hours: string | null }[];
+  hoursByDay: { day: string; hours?: string | null }[];
   giftCertNote: string;
   newsletterText: string;
   studentPricing?: { service: string; price: string }[];
@@ -30,6 +31,7 @@ const data = raw as BusinessContent;
 // Editable by Clara through the CMS at /admin — do not hard-code these values elsewhere.
 export const business = {
   ...data,
+  announcement: data.announcement ?? "",
   movingNotice: data.movingNotice ?? "",
   facebook: data.facebook ?? "",
   instagram: data.instagram ?? "",

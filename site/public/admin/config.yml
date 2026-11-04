@@ -1,4 +1,4 @@
-# Decap CMS configuration — defines exactly what Clara can edit.
+# Sveltia CMS configuration — defines exactly what Clara can edit at /admin.
 # Edits are saved as commits to GitHub, which auto-rebuilds the site on Cloudflare Pages.
 
 backend:
@@ -11,80 +11,85 @@ backend:
     uploadMedia: "Website edit: add photo {{path}}"
     deleteMedia: "Website edit: remove photo {{path}}"
 
-local_backend: true
-
+app_title: "Time 4U — Website Editor"
 site_url: https://time4utherapymassageclinicandschool.com
 display_url: https://time4utherapymassageclinicandschool.com
-logo_url: /apple-icon.png
+logo:
+  src: /apple-icon.png
 show_preview_links: false
+
+# Keep cleared optional fields out of the JSON, matching what the site code expects.
+output:
+  omit_empty_optional_fields: true
 
 media_folder: "site/public/images"
 public_folder: "/images"
 
 collections:
   - name: business
-    label: "Business Info"
-    description: "Contact details, hours, and Google reviews shown across the site."
+    label: "Quick updates"
+    description: "Start here: event announcements, hours, phone, address, prices for students and reviews."
     editor: { preview: false }
     files:
       - name: details
-        label: "Details & Reviews"
+        label: "Announcement, hours & contact info"
         file: "site/content/business.json"
         fields:
-          - { name: name, label: "Full business name", widget: string }
-          - { name: shortName, label: "Short name", widget: string }
-          - { name: phone, label: "Phone number", widget: string, hint: "e.g. (405) 933-0962" }
+          - { name: announcement, label: "Announcement bar (top of every page)", widget: string, required: false, hint: "For events or closures, e.g. 'Open house Friday, Nov 7, 5–8 pm — everyone welcome!'. Delete the text to hide the bar." }
+          - { name: hours, label: "Opening hours (short)", widget: string, hint: "Shown at the top of every page, e.g. Mon–Thu, 9am–5pm" }
+          - name: hoursByDay
+            label: "Opening hours by day (Contact page)"
+            label_singular: "Day"
+            widget: list
+            allow_add: false
+            hint: "Keep these matching the short hours above."
+            fields:
+              - { name: day, label: "Day", widget: string }
+              - { name: hours, label: "Hours", widget: string, required: false, hint: "e.g. 9:00 am – 5:00 pm. Leave blank if closed." }
+          - { name: bookingNote, label: "How to book", widget: string, hint: "e.g. By appointment only" }
+          - { name: phone, label: "Phone number", widget: string, hint: "e.g. (405) 933-0962. Call and text buttons use this number." }
           - { name: addressLine, label: "Street address", widget: string }
           - { name: city, label: "City", widget: string }
           - { name: state, label: "State", widget: string }
           - { name: zip, label: "ZIP code", widget: string }
-          - { name: hours, label: "Hours", widget: string, hint: "e.g. Mon–Thu, 9am–5pm" }
-          - { name: bookingNote, label: "Booking note", widget: string, hint: "e.g. By appointment only" }
-          - { name: movingNotice, label: "Notice banner", widget: string, required: false, hint: "Short announcement, e.g. a move date. Leave blank to hide." }
-          - name: hoursByDay
-            label: "Hours by day (Contact page table)"
-            label_singular: "Day"
-            widget: list
-            allow_add: false
-            fields:
-              - { name: day, label: "Day", widget: string }
-              - { name: hours, label: "Hours", widget: string, required: false, hint: "e.g. 9:00 am – 5:00 pm. Leave blank if closed." }
-          - { name: licenseNumber, label: "License number", widget: string }
-          - { name: abmpMember, label: "ABMP member (show in footer)", widget: boolean, required: false }
-          - { name: reviewsRating, label: "Google rating text", widget: string, hint: "e.g. 4.8 out of 5" }
-          - { name: giftCertNote, label: "Gift certificate text (Contact page)", widget: text, hint: "The heading and button come from Home Page → Gift Certificates." }
-          - { name: newsletterText, label: "Newsletter blurb (footer)", widget: text }
-          - { name: facebook, label: "Facebook page link", widget: string, required: false, hint: "Full link starting with https://. Leave blank to hide." }
-          - { name: instagram, label: "Instagram link", widget: string, required: false, hint: "Full link starting with https://. Leave blank to hide." }
+          - { name: movingNotice, label: "Small note under your contact info", widget: string, required: false, hint: "Shown on the Home and Contact pages and in the footer. Leave blank to hide." }
           - name: studentPricing
-            label: "Student massage pricing"
+            label: "Student massage prices (School page)"
             label_singular: "Price"
             widget: list
             required: false
-            hint: "Shown on the School page. Leave empty to hide the pricing section."
+            hint: "Remove all items to hide the student pricing section."
             fields:
               - { name: service, label: "Service", widget: string, hint: "e.g. Hour massage" }
               - { name: price, label: "Price", widget: string, hint: "e.g. $45.00" }
           - name: reviews
-            label: "Reviews"
+            label: "Client reviews (Home page)"
             label_singular: "Review"
             widget: list
-            hint: "Shown on the home page. Copy the text exactly as the client wrote it."
+            hint: "Copy the text exactly as the client wrote it."
             summary: "{{fields.author}}"
             fields:
               - { name: quote, label: "Review text", widget: text }
               - { name: author, label: "Reviewer name", widget: string }
               - { name: source, label: "Source", widget: string, default: "Google review" }
+          - { name: reviewsRating, label: "Google rating", widget: string, hint: "e.g. 4.8 out of 5" }
+          - { name: giftCertNote, label: "Gift certificate text (Contact page)", widget: text }
+          - { name: newsletterText, label: "Newsletter invitation (footer)", widget: text }
+          - { name: facebook, label: "Facebook page link", widget: string, required: false, hint: "Full link starting with https://. Leave blank to hide." }
+          - { name: instagram, label: "Instagram link", widget: string, required: false, hint: "Full link starting with https://. Leave blank to hide." }
+          - { name: name, label: "Full business name", widget: string, hint: "Rarely changed." }
+          - { name: shortName, label: "Short business name", widget: string, hint: "Rarely changed." }
+          - { name: licenseNumber, label: "Massage license number", widget: string, hint: "Rarely changed." }
+          - { name: abmpMember, label: "Show ABMP membership in footer", widget: boolean, required: false }
 
   - name: homePage
-    label: "Home Page"
+    label: "Home page"
     description: "Everything on the front page, top to bottom."
     editor: { preview: false }
     files:
       - name: home
         label: "Home page content"
         file: "site/content/site-home.json"
-        description: "Fields are listed in the order they appear on the page, top to bottom."
         fields:
           - { name: eyebrow, label: "TOP — Small label above headline", widget: string }
           - { name: headline, label: "TOP — Big headline", widget: string }
@@ -127,7 +132,7 @@ collections:
               - { name: number, label: "Step number", widget: string }
               - { name: title, label: "Title", widget: string }
               - { name: body, label: "Text", widget: text }
-          - { name: reviewsHeading, label: "REVIEWS — Heading", widget: string, hint: "The reviews themselves are edited under Business Info." }
+          - { name: reviewsHeading, label: "REVIEWS — Heading", widget: string, hint: "The reviews themselves are edited under Quick updates." }
           - { name: giftHeading, label: "GIFT CERTIFICATES — Heading", widget: string, hint: "Also used on the Contact page." }
           - { name: giftBody, label: "GIFT CERTIFICATES — Text", widget: text }
           - { name: giftNote, label: "GIFT CERTIFICATES — Small print", widget: string }
@@ -140,7 +145,7 @@ collections:
           - { name: credentialsLink, label: "LICENSED CARE — Credentials button text", widget: string }
 
   - name: servicesPage
-    label: "Services Page"
+    label: "Services & prices"
     description: "Service groups and prices."
     editor: { preview: false }
     files:
@@ -182,7 +187,7 @@ collections:
           - { name: ctaLink, label: "Bottom button text", widget: string }
 
   - name: aboutPage
-    label: "About Page"
+    label: "About Clara"
     description: "Clara's story, specialties, and photo."
     editor: { preview: false }
     files:
@@ -206,8 +211,8 @@ collections:
           - { name: ctaButton, label: "Bottom button text", widget: string, hint: "The phone number is added automatically." }
 
   - name: contactPage
-    label: "Contact Page"
-    description: "Booking instructions. Phone, address and hours are edited under Business Info."
+    label: "Contact page"
+    description: "Booking instructions. Phone, address and hours are edited under Quick updates."
     editor: { preview: false }
     files:
       - name: contact
@@ -217,7 +222,7 @@ collections:
           - { name: eyebrow, label: "Small label above headline", widget: string }
           - { name: headline, label: "Headline", widget: string }
           - { name: intro, label: "Intro text", widget: text }
-          - { name: bookHeading, label: "Booking box heading", widget: string, hint: "Phone, address and hours come from Business Info." }
+          - { name: bookHeading, label: "Booking box heading", widget: string, hint: "Phone, address and hours come from Quick updates." }
           - { name: goodToKnowHeading, label: "'Good to know' heading", widget: string }
           - { name: goodToKnowItems, label: "'Good to know' list", widget: list, field: { name: item, label: "Item", widget: string } }
           - { name: faqLink, label: "FAQ button text", widget: string }
@@ -225,7 +230,7 @@ collections:
           - { name: mapHeading, label: "Map box heading", widget: string }
 
   - name: faqPage
-    label: "FAQ Page"
+    label: "Questions & policies (FAQ)"
     description: "Questions, answers, and booking policies."
     editor: { preview: false }
     files:
@@ -259,8 +264,8 @@ collections:
           - { name: ctaLink, label: "Bottom button text", widget: string }
 
   - name: schoolPage
-    label: "School Page"
-    description: "School of Massage Therapy info. Student prices are under Business Info."
+    label: "School page"
+    description: "School of Massage Therapy info. Student prices are under Quick updates."
     editor: { preview: false }
     files:
       - name: school
@@ -275,13 +280,13 @@ collections:
           - { name: cardBadges, label: "School box tags", widget: list, field: { name: item, label: "Tag", widget: string } }
           - { name: interestHeading, label: "Newsletter box heading", widget: string }
           - { name: interestBody, label: "Newsletter box text", widget: text }
-          - { name: studentHeading, label: "Student massages heading", widget: string, hint: "Prices are edited under Business Info → Student massage pricing." }
+          - { name: studentHeading, label: "Student massages heading", widget: string, hint: "Prices are edited under Quick updates → Student massage prices." }
           - { name: studentIntro, label: "Student massages text", widget: text }
           - { name: ctaPrimary, widget: hidden }
           - { name: ctaSecondary, label: "Student massages button text", widget: string }
 
   - name: benefitsPage
-    label: "Benefits Page"
+    label: "Benefits page"
     description: "What each service does and how to prepare."
     editor: { preview: false }
     files:
@@ -317,7 +322,7 @@ collections:
           - { name: ctaLink, label: "Bottom button label", widget: string }
 
   - name: credentialsPage
-    label: "Credentials Page"
+    label: "Credentials page"
     description: "License, education, and memberships."
     editor: { preview: false }
     files:
@@ -335,7 +340,7 @@ collections:
             summary: "{{fields.title}}"
             fields:
               - { name: title, label: "Title", widget: string }
-              - { name: body, label: "Text", widget: text, hint: "Type {license} to insert the license number from Business Info." }
+              - { name: body, label: "Text", widget: text, hint: "Type {license} to insert the license number from Quick updates." }
           - { name: note, label: "Small print", widget: text }
           - { name: ctaHeading, label: "Bottom heading", widget: string }
           - { name: ctaBody, label: "Bottom text", widget: string }

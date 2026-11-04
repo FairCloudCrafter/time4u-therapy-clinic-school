@@ -47,6 +47,11 @@ export default function SiteHeader() {
 
   return (
     <>
+      {business.announcement && (
+        <div className="announcement-bar" role="status">
+          <p className="wrap">{business.announcement}</p>
+        </div>
+      )}
       <div className="topbar">
         <div className="wrap topbar-inner">
           <span>
